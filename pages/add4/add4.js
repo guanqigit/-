@@ -166,7 +166,7 @@ Page({
           number: number,// 货单号
           carnumber: carnumber,// 车牌号
           supplier: supplier,// 供应商
-          unit: unit,// 单位
+          unit: unit,// 单位  sdfd
         },
         method: 'POST',
         header: { "Content-Type": "application/x-www-form-urlencoded" },
