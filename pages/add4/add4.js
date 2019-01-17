@@ -8,7 +8,7 @@ Page({
     post4: '',
     post5: '',
     post6: '',
-    pics: [],
+    pics: [],//
     isload: false
   },
   //项目名称
