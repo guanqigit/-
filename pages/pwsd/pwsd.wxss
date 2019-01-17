@@ -1,0 +1,21 @@
+.item{
+  padding:0 30rpx;
+  border-bottom: 1px solid #f5f5f5;
+  font-size: 28rpx;
+  color: #222;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.btn {
+  width: 578rpx;
+  height: 64rpx;
+  background-color: #26c8e0;
+  box-shadow: 0px 2rpx 7rpx 0px rgba(11, 179, 204, 0.38);
+  border-radius: 4rpx;
+  text-align: center;
+  line-height: 64rpx;
+  color: #fff;
+  font-size: 28rpx;
+  margin: 0 auto;
+  margin-top: 100rpx;
+}

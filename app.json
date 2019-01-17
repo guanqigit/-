@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/pwsd/pwsd",
+    "pages/add1/add1",
+    "pages/add2/add2",
+    "pages/add3/add3",
+    "pages/add4/add4",
+    "pages/add5/add5",
+    "pages/add6/add6",
+    "pages/add7/add7",
+    "pages/add8/add8",
+    "pages/add9/add9",
+    "pages/add10/add10",
+    "pages/after/after",
+    "pages/details/details",
+    "pages/details1/details1",
+    "pages/details2/details2",
+    "pages/details3/details3",
+    "pages/details4/details4",
+    "pages/details5/details5",
+    "pages/details6/details6",
+    "pages/details7/details7",
+    "pages/usedmachinery/usedmachinery",
+    "pages/businesscooperation/businesscooperation",
+    "pages/allorders/allorders",
+    "pages/allorders1/allorders",
+    "pages/allorders2/allorders",
+    "pages/allorders3/allorders",
+    "pages/allorders4/allorders",
+    "pages/allorders5/allorders",
+    "pages/allorders6/allorders",
+    "pages/allorders7/allorders",
+    "pages/member-message/member-message"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  }
+}

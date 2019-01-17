@@ -1,0 +1,11 @@
+<view class='container'>
+  <view class='flex flex-space flex-centers item'>
+    <text class='lable'>账号：</text>
+    <input type='text' class='flex flex-box input' placeholder='请输入后台管理账号'></input>
+  </view>
+  <view class='flex flex-space flex-centers item'>
+    <text class='lable'>密码：</text>
+    <input type='text' password="true" class='flex flex-box input' placeholder='请输入后台管理密码'></input>
+  </view>
+  <view class='flex flex-center btn'>提交</view>
+</view>

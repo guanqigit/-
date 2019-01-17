@@ -1,0 +1,119 @@
+<view class="page">
+  <swiper class="lunb" indicator-dots="true" autoplay="true" interval="3000" duration="3000">
+    <block wx:for="{{merchant_img}}" wx:key=''>
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" mode="aspectFill" bindtap="preview" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="flex flex-space line-box">
+    <view class="flex flex-column flex-box list-box">
+      <view class="flex flex-space">
+        <text class="lefttitle">工程名称：</text>
+        <text class="righttitle flex flex-box">{{infodata.site_name}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">工程地址：</text>
+        <text class="righttitle  flex flex-box">{{infodata.site_address}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">建设单位名称：</text>
+        <text class="righttitle flex flex-box">{{infodata.site_companyName}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">建设单位联系人：</text>
+        <text class="righttitle flex flex-box">{{infodata.site_companyContact}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">建设单位联系电话：</text>
+        <text class="righttitle flex flex-box">{{infodata.site_companyTell}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">施工单位名称：</text>
+        <text class="righttitle flex flex-box">{{infodata.site_constructionName}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">施工单位联系人：</text>
+        <text class="righttitle flex flex-box">{{infodata.site_constructionContact}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">施工单位联系电话：</text>
+        <text class="righttitle flex flex-box">{{infodata.site_constructionTell}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">监理单位名称：</text>
+        <text class="righttitle flex flex-box">{{infodata.site_supervisionName}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">监理单位联系人：</text>
+        <text class="righttitle flex flex-box">{{infodata.site_supervisionContact}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">监理单位联系电话：</text>
+        <text class="righttitle flex flex-box">{{infodata.site_supervisionTell}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">设计单位名称：</text>
+        <text class="righttitle flex flex-box">{{infodata.site_designName}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">设计单位联系人：</text>
+        <text class="righttitle flex flex-box">{{infodata.site_designContact}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">设计单位联系电话：</text>
+        <text class="righttitle flex flex-box">{{infodata.site_designTell}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">勘察单位名称：</text>
+        <text class="righttitle flex flex-box">{{infodata.site_surveyName}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">勘察单位联系人：</text>
+        <text class="righttitle flex flex-box">{{infodata.site_surveyContact}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">勘察单位联系电话：</text>
+        <text class="righttitle flex flex-box">{{infodata.site_surveyTell}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">工程类别：</text>
+        <text class="righttitle flex flex-box">{{infodata.site_engineeringTypeStr}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">结构类型：</text>
+        <text class="righttitle flex flex-box">{{infodata.site_structureTypeStr}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">建筑面积：</text>
+        <text class="righttitle flex flex-box">{{infodata.site_constructionArea}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">工程造价：</text>
+        <text class="righttitle flex flex-box">{{infodata.site_projectCosts}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">开工日期：</text>
+        <text class="righttitle flex flex-box">{{infodata.site_startTimeStr}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">计划竣工日期：</text>
+        <text class="righttitle flex flex-box">{{infodata.site_completionStr}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">项目简介：</text>
+        <text class="righttitle flex flex-box">{{infodata.site_Introduction}}</text>
+      </view>
+    </view>
+  </view>
+  <!--<view class="flex flex-space tab" hidden='{{code==0}}'>
+    <view class="flex flex-column flex-center flex-box tableft" bindtap="comment">
+      <image src="../../image/shop-star.png" class="commentimg"></image>
+      <text>收藏</text>
+    </view>
+    <view class="flex flex-column flex-center flex-box tabright" bindtap="phone">
+      <image src="../../image/tels.png" class="telimg"></image>
+      <text>电话</text>
+    </view>
+  </view>-->
+</view>

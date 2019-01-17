@@ -1,0 +1,194 @@
+.container, page {
+  position: relative;
+  background-color: #fff;
+  font-family: "微软雅黑";
+}
+
+.uplond-box {
+  position: relative;
+}
+
+.huocheimg {
+  width: 100%;
+  height: 500rpx;
+  filter: blur(2px);
+}
+
+.uplond-main {
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  height: 100%;
+  background: rgba(000, 000, 000, 0.7);
+}
+
+.photo-box {
+  width: 150rpx;
+  height: 150rpx;
+  background: #ff552e;
+  opacity: 0.7;
+  border-radius: 50%;
+  margin-bottom: 20rpx;
+}
+
+.photoimg {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.imgs {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 10rpx 18rpx;
+}
+
+.info {
+  padding: 10rpx 10rpx 10rpx 20rpx;
+  background: #f5f5f5;
+  margin-top: 20rpx;
+}
+
+.infos {
+  padding: 0 10rpx 0 20rpx;
+}
+
+.orange {
+  color: #ff552e;
+}
+
+.blue {
+  color: #1296db;
+}
+
+.input-box {
+  margin: 0 10rpx;
+  position: relative;
+  height: 80rpx;
+  padding: 0 10rpx;
+  background: #fff;
+  border: 1px solid #999;
+}
+
+.textarea-box {
+  margin: 0 10rpx;
+  padding: 20rpx 10rpx;
+  background: #fff;
+  border: 1px solid #999;
+}
+
+.textarea-v {
+  width: 100%;
+  min-height:100rpx;
+  display: block;
+}
+
+.input-boxs {
+  margin: 0 10rpx;
+  position: relative;
+  padding: 0 10rpx;
+  background: #fff;
+  border: 1px solid #999;
+}
+
+.title {
+  padding-right: 15rpx;
+  color: #666;
+  border-right: 1px solid #999;
+  margin-right: 20rpx;
+}
+
+.rightimg {
+  width: 15rpx;
+  height: 20rpx;
+}
+
+.infobox {
+  height: 60rpx;
+  padding: 0 20rpx;
+}
+
+.infoimg {
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 10rpx;
+}
+
+.infoimgs {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+
+.grey {
+  color: #999;
+}
+
+.red {
+  color: #ff0a00;
+}
+
+.tiez {
+  color: #999;
+  margin-right: 15rpx;
+}
+
+.tiezs {
+  font-size: 20rpx;
+}
+
+.photobox {
+  width: 20%;
+  margin-bottom: 20rpx;
+}
+
+.photoimgbox {
+  width: 100%;
+  height: 150rpx;
+  background: #f4f5ef;
+  margin-bottom: 10rpx;
+}
+
+.radio {
+  margin-right: 60rpx;
+}
+
+.radio-group {
+  transform: scale(0.7);
+  margin-right: 30rpx;
+  font-size: 30rpx;
+}
+
+.QQ {
+  width: 40rpx;
+  height: 30rpx;
+  margin-left: 50rpx;
+  margin-right: 20rpx;
+}
+
+.qqraido {
+  transform: scale(0.7);
+}
+
+.bottoomleft {
+  padding: 15rpx 100rpx;
+  border: 1px solid #999;
+}
+
+.bottoomright {
+  padding: 15rpx 0;
+  background: #1296db;
+  color: #fff;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.bottom {
+  border: none;
+  margin-top: 50rpx;
+}
+
+.picker {
+  width: 100%;
+}

@@ -1,0 +1,254 @@
+<view class="container">
+  <view class="flex uplond-box">
+    <view class="flex flex-box">
+      <image src="../../image/biaojin2_02.jpg" class="huocheimg"></image>
+    </view>
+    <view class="flex flex-column flex-center uplond-main">
+      <view class="flex flex-center photo-box" bindtap="uploadimg">
+        <image src="../../image/photo.png" class="photoimg"></image>
+      </view>
+      <view class="flex">
+        <text>拍个照呗</text>
+      </view>
+    </view>
+  </view>
+  <view class="flex flex-wrap">
+    <view class="flex" wx:for="{{pics}}" wx:key="" style="position:relative">
+      <image src="{{item}}" class="imgs"></image>
+      <image src="../../image/detail-rea1.png" data-index="{{index}}" bindtap="remove" style="border-radius: 50%;position:absolute;top:5rpx;right:5rpx;width:20rpx;height:20rpx;padding:10rpx;background:rgba(255,255,255,.8)"></image>
+    </view>
+  </view>
+  <view class="flex info">
+    <text class="orange">您今天还可免费发布两条，当月可免发布两条</text>
+  </view>
+  <view class="flex" style="padding:10rpx 0;background:#fff;margin:10rpx 0 20rpx 0;"></view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+    <view class="flex">
+      <text class="title">工程名称</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <input bindinput="name" data-id="1" />
+    </view>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+    <view class="flex">
+      <text class="title">工程地址</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <input bindinput="name" data-id="2" />
+    </view>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+    <view class="flex">
+      <text class="title">建设单位名称</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <input bindinput="name" data-id="3" />
+    </view>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+    <view class="flex">
+      <text class="title">建设单位联系人</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <input bindinput="name" data-id="4" />
+    </view>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+    <view class="flex">
+      <text class="title">建设单位联系电话</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <input bindinput="name" type='number' data-id="5" maxlength="11" />
+    </view>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+    <view class="flex">
+      <text class="title">施工单位名称</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <input bindinput="name" data-id="6" />
+    </view>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+    <view class="flex">
+      <text class="title">施工单位联系人</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <input bindinput="name" data-id="7" />
+    </view>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+    <view class="flex">
+      <text class="title">施工单位联系电话</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <input bindinput="name" data-id="8" type='number' maxlength="11" />
+    </view>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+    <view class="flex">
+      <text class="title">监理单位名称</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <input bindinput="name" data-id="9" />
+    </view>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+    <view class="flex">
+      <text class="title">监理单位联系人</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <input bindinput="name" data-id="10" />
+    </view>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+    <view class="flex">
+      <text class="title">监理单位联系电话</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <input bindinput="name" data-id="11" type='number' maxlength="11" />
+    </view>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+    <view class="flex">
+      <text class="title">设计单位名称</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <input bindinput="name" data-id="12" />
+    </view>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+    <view class="flex">
+      <text class="title">设计单位联系人</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <input bindinput="name" data-id="13" />
+    </view>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+    <view class="flex">
+      <text class="title">设计单位联系电话</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <input bindinput="name" data-id="14" type='number' maxlength="11" />
+    </view>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+    <view class="flex">
+      <text class="title">勘察单位名称</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <input bindinput="name" data-id="15" />
+    </view>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+    <view class="flex">
+      <text class="title">勘察单位联系人</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <input bindinput="name" data-id="16" />
+    </view>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+    <view class="flex">
+      <text class="title">勘察单位联系电话</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <input bindinput="name" data-id="17" type='number' maxlength="11" />
+    </view>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+    <view class="flex">
+      <text class="title">工程类别</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <!-- <view class="section flex flex-box">
+        <picker bindchange="bindPickerChange" class='flex flex-box' value="{{index}}" range="{{array}}">
+          <view class="picker">{{array[index]}}</view>
+        </picker>
+      </view>
+      <view class="flex">
+        <image src="../../image/iconright1.png" class="rightimg"></image>
+      </view> -->
+      <input bindinput="name" data-id="21" />
+    </view>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+    <view class="flex">
+      <text class="title">结构类型</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <!-- <view class="section flex flex-box">
+        <picker bindchange="bindPickerChanges" class='flex flex-box' value="{{index1}}" range="{{array1}}">
+          <view class="picker">{{array1[index1]}}</view>
+        </picker>
+      </view>
+      <view class="flex">
+        <image src="../../image/iconright1.png" class="rightimg"></image>
+      </view> -->
+      <input bindinput="name" data-id="22" />
+    </view>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+    <view class="flex">
+      <text class="title">建筑面积</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <input bindinput="name" data-id="18" type='number'/>
+    </view>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+    <view class="flex">
+      <text class="title">工程造价</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <input bindinput="name" data-id="19" type='number'/>
+    </view>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+    <view class="flex">
+      <text class="title">开工日期</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <view class="section flex  flex-box">
+        <picker mode="date" value="{{date}}" start="" end="" bindchange="bindDateChange">
+          <view class="picker">{{date}}
+          </view>
+        </picker>
+      </view>
+      <view class="flex">
+        <image src="../../image/iconright1.png" class="rightimg"></image>
+      </view>
+    </view>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="border-top:none">
+    <view class="flex">
+      <text class="title">计划竣工日期</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <view class="section flex  flex-box">
+        <picker mode="date" value="{{dates}}" start="" end="" bindchange="bindDateChange">
+          <view class="picker">{{dates}}
+          </view>
+        </picker>
+      </view>
+      <view class="flex">
+        <image src="../../image/iconright1.png" class="rightimg"></image>
+      </view>
+    </view>
+  </view>
+  <view class="flex flex-row textarea-box" style="margin-top:20rpx;">
+    <view class="flex">
+      <text class="title">项目简介</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <textarea class="textarea-v" auto-height="true" bindinput="name" data-id="20" cursor-spacing="100"></textarea>
+    </view>
+  </view>
+  <view class="flex  flex-centerss input-box bottom">
+    <view class="flex bottoomright flex-center" bindtap="submit">
+      发布
+    </view>
+  </view>
+</view>

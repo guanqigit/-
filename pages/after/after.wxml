@@ -1,0 +1,58 @@
+<view class="flex flex-column" style='padding-bottom:30rpx;'>
+  <view class='flex flex-center'>
+    <image src='../../image/afterbg.jpg' class='backgroundimg'></image>
+  </view>
+  <view class='flex flex-column paddinglr20' style='background:#fff;padding-bottom:20rpx;'>
+    <view class='flex flex-center row'>
+      <text class='font28 color2'>关于我们</text>
+    </view>
+    <view class='flex indent flex-column'>
+      <text class='font26 color8'>  我们专注工程建设项目管理领域，为行业用户提供优秀的IT服务。我们将充分利用互联网、通讯和软硬件的最新技术整合，为用户提供更方便、更灵活、更优质的服务，协助建设工程项目管理智能化，夯实项目核心竞争力。</text>
+      <text class='font26 color8'>我们诚邀众多志同道合的朋友们加入我们，共同努力打造项目管理精品服务。</text>
+    </view>
+  </view>
+  <view class='flex flex-column paddinglr20 margint20' style='background:#fff'>
+    <view class='flex flex-column'>
+      <view class='flex flex-row flex-centers'>
+        <button open-type='contact' class='btns flex flex-row flex-centers'>
+          <text class='font30 color2'>在线客服</text>
+        </button>
+      </view>
+    </view>
+    <view class='flex flex-column row'>
+      <view class='flex flex-row flex-centers' bindtap='tel'>
+        <text class='font30 color2'>电话客服</text>
+      </view>
+    </view>
+  </view>
+  <view class='flex flex-column paddinglr20 margint20' style='background:#fff'>
+    <view class='flex flex-row flex-centers rows'>
+      <view class='flex flex-row flex-centers'>
+        <text class='font28 color2'>公众号：</text>
+      </view>
+      <view class='flex flex-row flex-centers'>
+        <text class='font28 color2'>微信搜索“蚂蚁公社”</text>
+      </view>
+    </view>
+    <view class='flex flex-row flex-centers rows'>
+      <view class='flex flex-row flex-centers'>
+        <text class='font28 color2'>客服热线：</text>
+      </view>
+      <view class='flex flex-row flex-centers'>
+        <text class='font28 color2'>13070177479</text>
+      </view>
+    </view>
+    <view class='flex flex-wrap row'>
+      <view class='flex flex-row' bindtap='address'>
+        <view class='flex flex-row flex-cneters'>
+          <text class='font28 color2' style='white-space: nowrap'>公司地址：</text>
+        </view>
+        <text class='font28 color2'>北京市海淀区昌运宫7号楼1幢三层</text>
+      </view>
+    </view>
+  </view>
+  <view class='flex flex-column paddinglr20'>
+    <text class='font26 color8 margint10'>客户服务时间： 9:00-17:00(工作日)</text>
+    <text class='font26 color8 margint10'>(非服务时间如有问题请点击 "在线客服" 留言)</text>
+  </view>
+</view>

@@ -1,0 +1,38 @@
+<view class='container'>
+  <view class='member-message-mian'>
+    <view class='member-message-row member-message-t flex flex-row flex-centers'>
+      <open-data style='border-radius:50%;overflow:hidden;display:block;height:15vw;width:15vw;margin-right:30rpx;' type='userAvatarUrl'></open-data>
+      <open-data type="userNickName"></open-data>
+    </view>
+  </view>
+  <view class='flex flex-row bor' bindtap='creat'>
+    <text class='member-message-row-name'>创建工程</text>
+  </view>
+  <view class='flex flex-row bor' bindtap='pawd'>
+    <text class='member-message-row-name'>密码管理</text>
+  </view>
+  <view class='flex flex-row bor' bindtap='about'>
+    <text class='member-message-row-name'>关于我们</text>
+  </view>
+  <!-->
+  <view class='member-message-row member-message-t flex flex-row flex-space'>
+    <text class='member-message-row-name'>生日</text>
+    <view class='flex flex-row flex-space flex-center flex-box flex-end'>
+      <picker mode="date" value="{{date}}" bindchange="bindDateChange" class='flex flex-end flex-box'>
+        <text class='picker' style='width:80%'>{{date}}</text>
+        <image class='member-message-jt' src='/image/righticon.png'></image>
+      </picker>
+    </view>
+  </view>
+  <view class='member-message-row member-message-t flex flex-row flex-space'>
+    <text class='member-message-row-name'>手机号</text>
+    <view catchtap='cheagephone' class='flex flex-row flex-space flex-centers flex-box flex-end' wx:if="{{userinfo.phone}}">
+      <text>{{userinfo.phone}}</text>
+      <image class='member-message-jt' src='/image/righticon.png'></image>
+    </view>
+    <view catchtap='goPhone' class='flex flex-row flex-space flex-centers flex-box flex-end' wx:if="{{!userinfo.phone}}">
+      <text>未注册</text>
+      <image class='member-message-jt' src='/image/righticon.png'></image>
+    </view>
+  </view>-->
+</view>

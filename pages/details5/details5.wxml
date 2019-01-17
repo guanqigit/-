@@ -1,0 +1,44 @@
+<view class="page">
+  <swiper class="lunb" indicator-dots="true" autoplay="true" interval="3000" duration="3000">
+    <block wx:for="{{merchant_img}}" wx:key=''>
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" mode="aspectFill" bindtap="preview" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="flex flex-space line-box">
+    <view class="flex flex-column flex-box list-box">
+      <view class="flex flex-space">
+        <text class="lefttitle">需要整改的安全问题：</text>
+        <text class="righttitle flex flex-box">{{infodata.safety_modify}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">预计完成整改的时间：</text>
+        <text class="righttitle flex flex-box">{{infodata.safety_completeTimeStr}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">完成整改需要协调的问题：</text>
+        <text class="righttitle flex flex-box">{{infodata.safety_coordination}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">施工部位：</text>
+        <text class="righttitle flex flex-box">{{infodata.safety_completeTimeStr}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">备注：</text>
+        <text class="righttitle flex flex-box">{{infodata.safety_coordination}}</text>
+      </view>
+    </view>
+  </view>
+  <!--<view class="flex flex-space tab" hidden='{{code==0}}'>
+    <view class="flex flex-column flex-center flex-box tableft" bindtap="comment">
+      <image src="../../image/shop-star.png" class="commentimg"></image>
+      <text>收藏</text>
+    </view>
+    <view class="flex flex-column flex-center flex-box tabright" bindtap="phone">
+      <image src="../../image/tels.png" class="telimg"></image>
+      <text>电话</text>
+    </view>
+  </view>-->
+</view>
+<view class='flex flex-center' style='position:fixed;bottom:0;left:0;width:100%;text-align:center;font-size:30rpx;color:#000;background:#fff;border-top:1px solid #f0f0f0;padding:10rpx 0' bindtap='gobackdate'>施工日历</view>

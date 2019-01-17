@@ -1,0 +1,195 @@
+/**app.wxss**/
+view{
+  font-family:"微软雅黑";
+}
+.container {
+  height: 100%;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  color: #303030;
+  font-size: 26rpx;
+  background:#fff;
+}
+.textarea-v {
+  width: 100%;
+  min-height:100rpx;
+  display: block;
+}
+page {
+  color: #303030;
+  font-size: 26rpx;
+}
+
+/*购物车样式*/
+
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-space {
+  justify-content: space-between;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+.flex-end-align{
+  align-items:flex-end;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-centers {
+  align-content: center;
+  align-items: center;
+}
+
+.flex-centerss {
+  align-content: center;
+  align-items: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.text-wrap {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.text-hiddle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-box {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.flex-strech {
+  align-items: stretch;
+}
+
+/*购物车为空*/
+
+/*.hiddle-pic {
+  position: absolute;
+  left: 50%;
+  margin-left: -150rpx;
+}*/
+
+.pics {
+  width: 320rpx;
+  height: 143rpx;
+}
+
+.pic-buttom {
+  color: #c5c5c5;
+  font-size: 30rpx;
+  padding-bottom: 32rpx;
+}
+
+.pic-shopping-text {
+  color: white;
+  background-color: #ff6a6a;
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 0rpx;
+  font-size: 28rpx;
+  border-radius: 48rpx;
+}
+
+.overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+win25 {
+  font-size: 25rpx;
+}
+
+win30 {
+  font-size: 30rpx;
+}
+
+.color-grays {
+  color: #b5b5b5;
+}
+.nullpic{
+  width: 300rpx;
+  font-size: 30rpx;
+  color: #909090;
+  text-align: center;
+}
+/*￥符号样式-首页*/
+.maneysize{
+  font-size: 30rpx;
+}
+/*￥详情页样式*/
+.maney-detail{
+  font-size: 26rpx;
+}
+/*￥个人中心样式*/
+.per-size{
+  font-size: 22rpx;
+  /*vertical-align: bottom;
+  display: table-cell;*/
+}
+/*￥收藏*/
+.colle-maney{
+  font-size: 24rpx;
+}
+/*全局*/
+.list-maney{
+  display: table-cell;
+  vertical-align: bottom;
+}
+.logos{
+  width: 48rpx;
+  height: 36rpx;
+   margin-right: 8rpx;
+}
+.footers-logos{
+  background:#f4f4f4;
+
+  padding: 30rpx 0;
+ 
+}
+.logs-text{
+  font-size: 25rpx;
+  color: #c1c1c1;
+}
+.header{
+  position: relative;
+}
+input{
+  width: 100%;
+}

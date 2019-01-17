@@ -1,0 +1,93 @@
+.container, page {
+  background-color: #f3f3f3;
+}
+
+.listimg {
+  width: 220rpx;
+  height: 220rpx;
+  margin-right: 20rpx;
+}
+
+.list {
+  padding: 30rpx;
+  border-bottom: 1px solid #f5f5f5;
+  background: #fff;
+}
+
+.title {
+  color: #333;
+  font-size: 32rpx;
+  line-height: 50rpx;
+}
+
+.pic {
+  margin-top: 30rpx;
+}
+
+.adress {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.addbtn {
+  color: #1296db;
+  font-size: 20rpx;
+}
+
+.header {
+  background: #fff;
+  margin-bottom: 1px;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.back {
+  width: 50rpx;
+  height: 45rpx;
+  margin: 0 30rpx 0 10rpx;
+}
+
+.whilte {
+  background: #fff;
+  padding: 10rpx 20rpx;
+  margin:0 20rpx;
+  border-radius: 50px;
+  border:1px solid #f0f0f0;
+}
+
+.white {
+  width: 40rpx;
+  height: 40rpx;
+}
+.site{
+  width: 25rpx;
+  height: 30rpx;
+  margin-right: 15rpx;
+}
+.lable{
+  padding: 0 10rpx;
+  border: 1px solid #1296db;
+  border-radius: 4px;
+  font-size: 26rpx;
+  color: #1296db;
+  height: 30rpx;
+  line-height: 30rpx;
+}
+.tongji {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 30rpx;
+}
+
+.search {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.new {
+  position: absolute;
+  top: 0.1rem;
+  right: 0.7rem;
+  font-size: 24rpx;
+  color: red;
+}

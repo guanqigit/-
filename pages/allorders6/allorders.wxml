@@ -1,0 +1,62 @@
+<view class="container">
+  <view class="flex flex-centerss  flex-space header">
+    <view class="flex flex-box nav {{nav==0?'nav-ac':''}} flex-center" bindtap='nav' data-id="0">人员情况</view>
+    <view class="flex flex-box nav {{nav==1?'nav-ac':''}} flex-center" bindtap='nav' data-id="1">人员需求</view>
+  </view>
+
+  <view bindtap="goInfo" class="flex flex-row list" wx:for-index="inde" data-id="{{item.laborSituation_id}}" wx:for="{{list}}" wx:key="" wx:if="{{nav==0}}">
+    <view class="flex flex-center">
+      <image src="{{item.imagePath}}" class="listimg"></image>
+    </view>
+    <view class="flex flex-column flex-box" style='overflow:hidden'>
+      <view class="flex flex-column title">
+        <text class='text-hiddle'>{{item.laborSituation_weather}}</text>
+        <view class='flex flex-space'>
+          <text style='font-size:26rpx;color:#888'></text>
+          <text style='font-size:25rpx;color:#999'></text>
+        </view>
+        <view class='flex flex-row flex-centers'>
+          <text style='font-size:26rpx;color:#888'>班组人数：{{item.laborSituation_count}}</text>
+        </view>
+        <!--<view class='flex flex-row flex-centeres flex-end-align'>
+          <text style='font-size:35rpx;color:red'>546</text>
+          <text style='font-size:28rpx;color:red'>万</text>
+        </view>-->
+      </view>
+      <view class="flex flex-space flex-end-align flex-box">
+        <text class="adress">{{item.laborSituation_createTimeStr}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='flex flex-center' style="padding:20rpx 0" wx:if="{{list.length==0&&nav==1}}">暂无数据</view>
+  <view bindtap="goInfos" class="flex flex-row list" wx:for-index="inde" data-id="{{item.need_id}}" wx:for="{{lists}}" wx:key="" wx:if="{{nav==1}}">
+    <view class="flex flex-center">
+      <image src="{{item.imagePath}}" class="listimg"></image>
+    </view>
+    <view class="flex flex-column flex-box" style='overflow:hidden'>
+      <view class="flex flex-column title">
+        <text class='text-hiddle'>{{item.className}}</text>
+        <view class='flex flex-space'>
+          <text style='font-size:26rpx;color:#888'>{{item.part}}</text>
+          <text style='font-size:26rpx;color:#888'>{{item.price}}</text>
+        </view>
+        <view class='flex flex-row flex-centers'>
+          <text style='font-size:26rpx;color:#888'>需求人员数量：{{item.count}}</text>
+        </view>
+        <!--<view class='flex flex-row flex-centeres flex-end-align'>
+          <text style='font-size:35rpx;color:red'>546</text>
+          <text style='font-size:28rpx;color:red'>万</text>
+        </view>-->
+      </view>
+      <view class="flex flex-space flex-end-align flex-box">
+        <text class="adress">{{item.createTime}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='flex flex-center' style="padding:20rpx 0" wx:if="{{lists.length==0&&nav==1}}">暂无数据</view>
+</view>
+<view class='flex flex-space' style='position:fixed;bottom:0;left:0;width:100%;text-align:center;font-size:30rpx;color:#000;background:#fff;padding:20rpx 0'>
+  <view class='flex flex-center flex-box' bindtap='gobackdate'>施工日历</view>
+  <view class='flex flex-center flex-box' style='border-left:1px solid #f0f0f0;border-right:1px solid #f0f0f0' bindtap='addnew'>添加人员情况</view>
+  <view class='flex flex-center flex-box' bindtap='addnew1'>添加人员需求</view>
+</view>

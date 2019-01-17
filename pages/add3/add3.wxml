@@ -1,0 +1,61 @@
+<view class="container">
+  <view class="flex uplond-box">
+    <view class="flex flex-box">
+      <image src="../../image/biaojin2_02.jpg" class="huocheimg"></image>
+    </view>
+    <view class="flex flex-column flex-center uplond-main">
+      <view class="flex flex-center photo-box" bindtap="uploadimg">
+        <image src="../../image/photo.png" class="photoimg"></image>
+      </view>
+      <view class="flex">
+        <text>拍个照呗</text>
+      </view>
+    </view>
+  </view>
+  <view class="flex flex-wrap">
+    <view class="flex" wx:for="{{pics}}" wx:key="" style="position:relative">
+      <image src="{{item}}" class="imgs"></image>
+      <image src="../../image/detail-rea1.png" data-index="{{index}}" bindtap="remove" style="border-radius: 50%;position:absolute;top:5rpx;right:5rpx;width:20rpx;height:20rpx;padding:10rpx;background:rgba(255,255,255,.8)"></image>
+    </view>
+  </view>
+  <view class="flex info">
+    <text class="orange">您今天还可免费发布两条，当月可免发布两条</text>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+    <view class="flex">
+      <text class="title">施工部位</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <input bindinput="name" data-id="0" />
+    </view>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;height:auto;padding:20rpx 10rpx;">
+    <view class="flex">
+      <text class="title">今日施工进度完成情况</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <textarea class="textarea-v" auto-height="true"  bindinput="name" data-id="1" cursor-spacing="100"></textarea>
+    </view>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;height:auto;padding:20rpx 10rpx;">
+    <view class="flex">
+      <text class="title">明天的计划安排</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <textarea class="textarea-v" auto-height="true"  bindinput="name" data-id="2" cursor-spacing="100"></textarea>
+    </view>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;height:auto;padding:20rpx 10rpx;">
+    <view class="flex">
+      <text class="title">需要协调解决的问题</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <textarea class="textarea-v" auto-height="true"  bindinput="name" data-id="3" cursor-spacing="100"></textarea>
+    </view>
+  </view>
+  <view class="flex  flex-centerss input-box bottom">
+    <view class="flex bottoomright flex-center" bindtap="submit">
+      发布
+    </view>
+  </view>
+</view>
