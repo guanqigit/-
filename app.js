@@ -51,6 +51,8 @@ App({
       ryxqAdd: "https://www.wxpaying.com/StaffingNeeds/Add",//人员需求添加
       GetPart: "https://www.wxpaying.com/Dictionary/GetPart",//人员需求添加班组加载项
       ryxqGetModel: "https://www.wxpaying.com/StaffingNeeds/GetModel",//人员需求详情
+      UserPwdShow: "https://www.wxpaying.com/UserManage/UserPwdShow",//密码管理加载
+      UserPwdHandle: "https://www.wxpaying.com/UserManage/UserPwdHandle",//密码管理提交
         
     }
   }
