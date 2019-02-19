@@ -3,6 +3,7 @@ Page({
   data: {
     code: '',
     psd: '',
+    codestate:0
   },
   clause: function () {
     wx.navigateTo({
@@ -20,6 +21,7 @@ Page({
     })
   },
   code: function (e) {
+    console.log(e.detail.value)
     this.setData({
       code: e.detail.value
     })
@@ -34,7 +36,7 @@ Page({
    */
   submit: function () {
     var that = this;
-    if (that.data.code == '') {
+    if (that.data.code == '' || !that.data.code) {
       wx.showToast({
         title: '请填写管理账号',
         icon: 'none',
@@ -42,7 +44,7 @@ Page({
       })
       return
     }
-    if (that.data.psd == '') {
+    if (that.data.psd == '' || !that.data.psd) {
       wx.showToast({
         title: '请填写管理密码',
         icon: 'none',
@@ -62,9 +64,10 @@ Page({
       success: function (res) {
         wx.showToast({
           title: '提交成功',
-        }, function () {
-          wx.navigateBack()
         })
+        setTimeout(function(){
+          wx.navigateBack()
+        },1500)
       }, fail: function () {
 
       },
@@ -83,8 +86,14 @@ Page({
       method: 'POST',
       header: { "Content-Type": "application/x-www-form-urlencoded" },
       success: function (res) {
+        if (res.data.model.login_name){
+          that.setData({
+            codestate: 1,
+          })
+        }
         that.setData({
-          user: res
+          code: res.data.model.login_name,
+          psd: res.data.model.login_pwd,
         })
       }, fail: function () {
 
