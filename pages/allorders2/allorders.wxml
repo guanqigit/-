@@ -24,6 +24,27 @@
     </view>
   </view>
   <view class='flex flex-center' style="padding:20rpx 0" wx:if="{{list.length==0&&nav==0}}">暂无数据</view>
+  <view bindtap="goInfo" class="flex flex-row list" wx:for-index="inde" data-id="{{item.arrival_id}}" wx:for="{{list}}" wx:key="" wx:if="{{nav==1}}">
+    <view class="flex flex-center">
+      <image src="{{item.arrival_image}}" class="listimg"></image>
+    </view>
+    <view class="flex flex-column flex-box" style='overflow:hidden'>
+      <view class="flex flex-column title">
+        <text class='text-hiddle'>{{item.arrival_name}}</text>
+        <view class='flex flex-space'>
+          <text style='font-size:26rpx;color:#888'>{{item.arrival_count}}</text>
+          <text style='font-size:25rpx;color:#999'>{{item.arrival_unitPrice}}</text>
+        </view>
+        <view class='flex flex-row flex-centers'>
+          <text style='font-size:26rpx;color:#888'>{{item.arrival_Signer}}</text>
+        </view>
+      </view>
+       <view class="flex flex-space flex-end-align flex-box">
+        <text class="adress">{{item.timeStr}}</text> 
+      </view> 
+    </view>
+  </view>
+  <view class='flex flex-center' style="padding:20rpx 0" wx:if="{{list.length==0&&nav==1}}">暂无数据</view>
 </view>
 <view class='flex flex-space' style='position:fixed;bottom:0;left:0;width:100%;text-align:center;font-size:30rpx;color:#000;background:#fff;padding:20rpx 0'>
   <view class='flex flex-center flex-box' bindtap='gobackdate'>施工日历</view>

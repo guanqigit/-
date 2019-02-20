@@ -26,13 +26,13 @@
       <text class="title">材料名称</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input data-id="1" bindinput='setdata' placeholder='请填写材料名称' value='{{name}}' />
+      <input data-id="1" bindinput='setdata' placeholder='请填写材料名称' value='{{post1}}' />
     </view>
     <view class='flex flex-column listbox' wx:if="{{loadlist.length>0&&isload}}">
       <view class='flex flex-box listitem' wx:for="{{loadlist}}" wx:key="" data-name="{{item.name}}" bindtap='setname'>{{item.name}}</view>
     </view>
   </view>
-  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+  <!-- <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
     <view class="flex">
       <text class="title">规格型号</text>
     </view>
@@ -41,13 +41,23 @@
         <view class="picker">{{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}}</view>
       </picker>
     </view>
+  </view> -->
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+    <view class="flex">
+      <text class="title">规格型号</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <input data-id="2" value='{{post2}}' bindinput='setdata'/>
+    </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
     <view class="flex">
       <text class="title">单位/（如盒、箱或其他）</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input data-id="1" />
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" style='width:100%'>
+        <view class="picker">{{array[index]}}</view>
+      </picker>
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
@@ -55,7 +65,7 @@
       <text class="title">数量</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input data-id="1" type='number' />
+      <input data-id="3" type='number' value='{{post3}}' bindinput='setdata'/>
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
@@ -63,7 +73,7 @@
       <text class="title">单价/元</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input data-id="1" />
+      <input data-id="4" type='digit' value='{{post4}}' bindinput='setdata'/>
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
@@ -71,17 +81,22 @@
       <text class="title">进场时限</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input data-id="1" type='number' />
+      <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+        <view class="picker">{{date}}</view>
+      </picker>
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
     <view class="flex">
       <text class="title">施工部位</text>
     </view>
-    <view class="flex flex-space flex-box flex-centerss">
+    <!-- <view class="flex flex-space flex-box flex-centerss">
       <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
         <view class="picker">{{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}}</view>
       </picker>
+    </view> -->
+    <view class="flex flex-space flex-box flex-centerss">
+      <input data-id="5" value='{{post5}}' bindinput='setdata'/>
     </view>
   </view>
   <view class="flex flex-row input-box" style="margin-top:20rpx;height:auto;padding:20rpx 10rpx;">
@@ -89,7 +104,7 @@
       <text class="title">备注</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <textarea class="textarea-v" auto-height="true" bindinput="name" data-id="2" cursor-spacing="100"></textarea>
+      <textarea class="textarea-v" auto-height="true" bindinput='setdata' data-id="6" cursor-spacing="100" value='{{post6}}'></textarea>
     </view>
   </view>
   <view class="flex  flex-centerss input-box bottom">

@@ -26,7 +26,7 @@
       <text class="title">材料名称</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" data-id="1" value='{{post1}}'/>
+      <input bindinput="name" data-id="1" value='{{post1}}' />
     </view>
     <view class='flex flex-column listbox' wx:if="{{loadlist.length>0&&isload}}">
       <view class='flex flex-box listitem' wx:for="{{loadlist}}" wx:key="" data-name="{{item.name}}" bindtap='setname'>{{item.name}}</view>
@@ -37,7 +37,7 @@
       <text class="title">规格型号</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" data-id="1" />
+      <input bindinput="name" data-id="2" value='{{post2}}' />
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
@@ -45,7 +45,7 @@
       <text class="title">货单号</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" data-id="1" />
+      <input bindinput="name" data-id="3" value='{{post3}}' />
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
@@ -53,7 +53,7 @@
       <text class="title">车牌号</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" data-id="1" />
+      <input bindinput="name" data-id="4" value='{{post4}}' />
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
@@ -61,7 +61,7 @@
       <text class="title">供应商</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" data-id="1" />
+      <input bindinput="name" data-id="5" value='{{post5}}' />
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
@@ -69,15 +69,18 @@
       <text class="title">单位</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" data-id="1" />
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" style='width:100%'>
+        <view class="picker">{{array[index]}}</view>
+      </picker>
     </view>
+    <image src='../../image/iconright1.png' class='righticon'></image>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
     <view class="flex">
       <text class="title">数量</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" type='number' data-id="2" />
+      <input bindinput="name" type='number' data-id="6" value='{{post6}}'/>
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
@@ -85,7 +88,7 @@
       <text class="title">单价</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" type='number' data-id="3" />
+      <input bindinput="name" type='number' data-id="7" value='{{post7}}'/>
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
@@ -93,7 +96,7 @@
       <text class="title">经手人</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" data-id="4" />
+      <input bindinput="name" data-id="8" value='{{post8}}'/>
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
@@ -101,7 +104,7 @@
       <text class="title">施工部位</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" data-id="5" />
+      <input bindinput="name" data-id="9" value='{{post9}}'/>
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;height:auto;padding:20rpx 10rpx;">
@@ -109,7 +112,7 @@
       <text class="title">备注信息</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <textarea class="textarea-v" auto-height="true"  bindinput="name" data-id="6" maxlength="1000" cursor-spacing="100"></textarea>
+      <textarea class="textarea-v" auto-height="true" bindinput="name" data-id="10" maxlength="1000" cursor-spacing="100" value='{{post10}}'></textarea>
     </view>
   </view>
   <view class="flex  flex-centerss input-box bottom">

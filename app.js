@@ -31,7 +31,9 @@ App({
       WcgclcGetList: "https://www.wxpaying.com/CompletionWork/GetList",//完成工程量
       WcgclcGetListadd: "https://www.wxpaying.com/CompletionWork/Add",//完成工程量添加
       CljcGetList: "https://www.wxpaying.com/Arrival/GetList",//材料进场情况
-      CljcAdd: "https://www.wxpaying.com/Arrival/Add",//材料进场情况添加
+      ClxqGetList: "https://www.wxpaying.com/MaterialDemand/GetList",//材料需求列表
+      CljcAdd: "https://www.wxpaying.com/Arrival/Add",//材料情况添加
+      ClxqAdd: "https://www.wxpaying.com/MaterialDemand/Add",//材料需求添加
       GetSiteDetails: "https://www.wxpaying.com/Site/GetSiteDetails",//详情
       add1: "https://www.wxpaying.com/MechanicalUse/Add",//机械添加
       add1list: "https://www.wxpaying.com/MechanicalUse/GetList",//机械列表
@@ -53,6 +55,7 @@ App({
       ryxqGetModel: "https://www.wxpaying.com/StaffingNeeds/GetModel",//人员需求详情
       UserPwdShow: "https://www.wxpaying.com/UserManage/UserPwdShow",//密码管理加载
       UserPwdHandle: "https://www.wxpaying.com/UserManage/UserPwdHandle",//密码管理提交
+      GetUnit: "https://www.wxpaying.com/Dictionary/GetUnit",//单位加载项
         
     }
   }

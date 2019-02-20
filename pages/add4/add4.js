@@ -8,8 +8,13 @@ Page({
     post4: '',
     post5: '',
     post6: '',
+    post7: '',
+    post8: '',
+    post9: '',
+    post10: '',
     pics: [],//
-    isload: false
+    isload: false,
+    index:0,
   },
   //项目名称
   name: function (e) {
@@ -45,6 +50,26 @@ Page({
     if (e.currentTarget.dataset.id == 6) {
       this.setData({
         post6: e.detail.value
+      })
+    }
+    if (e.currentTarget.dataset.id == 7) {
+      this.setData({
+        post7: e.detail.value
+      })
+    }
+    if (e.currentTarget.dataset.id == 8) {
+      this.setData({
+        post8: e.detail.value
+      })
+    }
+    if (e.currentTarget.dataset.id == 9) {
+      this.setData({
+        post9: e.detail.value
+      })
+    }
+    if (e.currentTarget.dataset.id == 10) {
+      this.setData({
+        post10: e.detail.value
       })
     }
   },
@@ -127,11 +152,16 @@ Page({
   submit: function () {
     var that = this;
     var arrival_name = that.data.post1;
-    var arrival_count = that.data.post2;
-    var arrival_unitPrice = that.data.post3;
-    var arrival_Signer = that.data.post4;
-    var arrival_part = that.data.post5;
-    var arrival_remarks = that.data.post6;
+    var modes = that.data.post2;
+    var number = that.data.post3;
+    var carnumber = that.data.post4;
+    var supplier = that.data.post5;
+    var unit = that.data.array[that.data.index];
+    var arrival_count = that.data.post6;
+    var arrival_unitPrice=that.data.post7;
+    var arrival_Signer = that.data.post8;
+    var arrival_part = that.data.post9;
+    var arrival_remarks=that.data.post10;
     var images = that.data.pics
     if (images.length == 0) {
       wx.showToast({
@@ -140,7 +170,7 @@ Page({
       })
       return;
     }
-    if (arrival_name == '' || arrival_count == '' || arrival_unitPrice == '' || arrival_Signer == '' || arrival_part == '') {
+    if (arrival_name == '' || arrival_count == '' || arrival_unitPrice == '') {
       wx.showToast({
         title: ' 请填写完整信息',
         image: '../../image/chacha.png'
@@ -158,7 +188,7 @@ Page({
           arrival_name: arrival_name,/// 材料名称
           arrival_count: arrival_count,// 数量
           arrival_unitPrice: arrival_unitPrice,// 单价
-          arrival_Signer: arrival_Signer,// 签收人
+          arrival_Signer: arrival_Signer,// 经手人
           arrival_part: arrival_part,// 使用部位
           arrival_remarks: arrival_remarks,// 备注信息
           site_id: that.data.id,
@@ -166,7 +196,7 @@ Page({
           number: number,// 货单号
           carnumber: carnumber,// 车牌号
           supplier: supplier,// 供应商
-          unit: unit,// 单位  sdfd
+          unit: unit,// 单位  
         },
         method: 'POST',
         header: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -193,10 +223,40 @@ Page({
       })
     }
   },
+  bindPickerChange(e) {
+    this.setData({
+      index: e.detail.value,
+    })
+  },
   onLoad: function (options) {
     var that = this;
     that.setData({
       id: options.id
+    })
+    wx.request({
+      url: app.globalData.apiUrl.GetUnit,
+      data: {},
+      method: 'POST',
+      header: { "Content-Type": "application/x-www-form-urlencoded" },
+      success: function (res) {
+        var arr=[];
+        for(var i in res.data.list){
+          arr.push(res.data.list[i].Name)
+        }
+        that.setData({
+          array:arr,
+          Unitlist: res.data.list
+        })
+      }, fail: function () {
+        wx.showToast({
+          title: '加载失败',
+          image: '../../image/chacha.png',
+          duration: 2000
+        })
+      },
+      complete: function () {
+        wx.hideToast();
+      }
     })
   },
   onShareAppMessage: function () {

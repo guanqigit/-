@@ -13,6 +13,26 @@
         <text class="righttitle flex flex-box">{{infodata.arrival_name}}</text>
       </view>
       <view class="flex flex-space">
+        <text class="lefttitle">规格型号：</text>
+        <text class="righttitle flex flex-box">{{infodata.modes}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">货单号：</text>
+        <text class="righttitle flex flex-box">{{infodata.number}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">车牌号：</text>
+        <text class="righttitle flex flex-box">{{infodata.carnumber}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">供应商：</text>
+        <text class="righttitle flex flex-box">{{infodata.supplier}}</text>
+      </view>
+      <view class="flex flex-space">
+        <text class="lefttitle">单位：</text>
+        <text class="righttitle  flex flex-box">{{infodata.unit}}</text>
+      </view>
+      <view class="flex flex-space">
         <text class="lefttitle">数量：</text>
         <text class="righttitle  flex flex-box">{{infodata.arrival_count}}</text>
       </view>
@@ -21,7 +41,7 @@
         <text class="righttitle flex flex-box">{{infodata.arrival_unitPrice}}</text>
       </view>
       <view class="flex flex-space">
-        <text class="lefttitle">签收人：</text>
+        <text class="lefttitle">经手人：</text>
         <text class="righttitle flex flex-box">{{infodata.arrival_Signer}}</text>
       </view>
       <view class="flex flex-space">

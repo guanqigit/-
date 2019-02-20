@@ -4,6 +4,10 @@ Page({
   data: {
     post1: '',
     post2: '',
+    post3: '',
+    post4: '',
+    post5: '',
+    post6: '',
     index: 0,
     array: [],
     pics: [],
@@ -18,7 +22,7 @@ Page({
     var that = this;
     if (e.currentTarget.dataset.id == 1) {
       that.setData({
-        name: e.detail.value,
+        post1: e.detail.value,
         isload: true
       }, function () {
         that.getonland(e.detail.value);
@@ -29,10 +33,30 @@ Page({
         post2: e.detail.value
       })
     }
+    if (e.currentTarget.dataset.id == 3) {
+      that.setData({
+        post3: e.detail.value
+      })
+    }
+    if (e.currentTarget.dataset.id == 4) {
+      that.setData({
+        post4: e.detail.value
+      })
+    }
+    if (e.currentTarget.dataset.id == 5) {
+      that.setData({
+        post5: e.detail.value
+      })
+    }
+    if (e.currentTarget.dataset.id == 6) {
+      that.setData({
+        post6: e.detail.value
+      })
+    }
   },
   setname: function (e) {
     this.setData({
-      name: e.currentTarget.dataset.name,
+      post1: e.currentTarget.dataset.name,
       isload: false
     })
   },
@@ -108,8 +132,12 @@ Page({
   },
   submit: function () {
     var that = this;
-    var laborSituation_count = that.data.post1;
-    var laborSituation_weather = that.data.post2;
+    var name = that.data.post1;
+    var modelStr = that.data.post2;
+    var count = that.data.post3;
+    var price = that.data.post4;
+    var partId = that.data.post5;
+    var remark = that.data.post6;
     var part_id = that.data.part_id;
     var images = that.data.pics;
     if (images.length == 0) {
@@ -118,7 +146,7 @@ Page({
         image: '../../image/chacha.png'
       })
       return;
-    } else if (laborSituation_count == '' || laborSituation_weather == '') {
+    } else if (name == '' || count == '') {
       wx.showToast({
         title: ' 请填写完整信息',
         image: '../../image/chacha.png'
@@ -129,14 +157,20 @@ Page({
         title: '正在提交',
       })
       wx.request({
-        url: app.globalData.apiUrl.sgadd,
+        url: app.globalData.apiUrl.ClxqAdd,
         data: {
-          openid: app.globalData.openid,
-          laborSituation_count: laborSituation_count,
-          laborSituation_weather: laborSituation_weather,
-          part_id: part_id,
-          site_id: that.data.id,
-          images: images
+          openId: app.globalData.openid,/// 用户openId openId
+          site_id: that.data.id, /// 工程Id site_id 
+          images: images,//图片
+          name: name,//材料名称
+          modelStr: modelStr,/// 规格型号
+          unitStr: that.data.array[that.data.index],/// 单位/(如盒/箱/其他) 
+          count: count,///  /// 数量
+          price: price,/// 单价/元
+          timeStr: that.data.date,/// 进厂时限 
+          partId: partId,/// 施工部位
+          remark: remark,/// 备注
+
         },
         method: 'POST',
         header: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -188,43 +222,81 @@ Page({
 
     }
   },
+  bindPickerChange(e) {
+    this.setData({
+      index: e.detail.value,
+    })
+  },
+  bindDateChange(e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      date: e.detail.value
+    })
+  },
   onLoad: function (options) {
     var that = this;
+    var time = new Date().getFullYear() + '-' + ((new Date().getMonth())+1)+'-'+new Date().getDate();
     that.setData({
-      id: options.id
+      id: options.id,
+      date: time
     })
     wx.request({
-      url: app.globalData.apiUrl.sgload,
+      url: app.globalData.apiUrl.GetUnit,
       data: {},
       method: 'POST',
       header: { "Content-Type": "application/x-www-form-urlencoded" },
       success: function (res) {
-        for (var i = 0; i < res.data.list.length; i++) {
-          that.data.multiArray[0].push([res.data.list[i].part_name])
-          for (var s = 0; s < res.data.list[i].item.length; s++) {
-            that.data.objectMultiArray.push({
-              'id': res.data.list[i].item[s].part_id,
-              'part_name': res.data.list[i].item[s].part_name,
-              'part_id': res.data.list[i].part_id
-            })
-          }
-        }
-        for (var i = 0; i < res.data.list[0].item.length; i++) {
-          that.data.multiArray[1].push([res.data.list[0].item[i].part_name])
+        var arr = [];
+        for (var i in res.data.list) {
+          arr.push(res.data.list[i].Name)
         }
         that.setData({
-          multiArray: that.data.multiArray,
-          objectMultiArray: that.data.objectMultiArray,
-          list: res.data.list,
-          part_id: res.data.list[0].item[0].part_id
+          array: arr,
+          Unitlist: res.data.list
         })
       }, fail: function () {
-
+        wx.showToast({
+          title: '加载失败',
+          image: '../../image/chacha.png',
+          duration: 2000
+        })
       },
       complete: function () {
-
+        wx.hideToast();
       }
     })
+    // wx.request({
+    //   url: app.globalData.apiUrl.sgload,
+    //   data: {},
+    //   method: 'POST',
+    //   header: { "Content-Type": "application/x-www-form-urlencoded" },
+    //   success: function (res) {
+    //     for (var i = 0; i < res.data.list.length; i++) {
+    //       that.data.multiArray[0].push([res.data.list[i].part_name])
+    //       for (var s = 0; s < res.data.list[i].item.length; s++) {
+    //         that.data.objectMultiArray.push({
+    //           'id': res.data.list[i].item[s].part_id,
+    //           'part_name': res.data.list[i].item[s].part_name,
+    //           'part_id': res.data.list[i].part_id
+    //         })
+    //       }
+    //     }
+    //     for (var i = 0; i < res.data.list[0].item.length; i++) {
+    //       that.data.multiArray[1].push([res.data.list[0].item[i].part_name])
+    //     }
+    //     that.setData({
+    //       multiArray: that.data.multiArray,
+    //       objectMultiArray: that.data.objectMultiArray,
+    //       list: res.data.list,
+    //       part_id: res.data.list[0].item[0].part_id
+    //     })
+    //   }, fail: function () {
+
+    //   },
+    //   complete: function () {
+
+    //   }
+    // })
   },
   onShareAppMessage: function () {
     return {
