@@ -182,7 +182,7 @@ Page({
           })
           setTimeout(function () {
             wx.navigateTo({
-              url: '../allorders6/allorders?id=' + that.data.id + '&type=1',
+              url: '../allorders2/allorders?id=' + that.data.id + '&type=2',
             })
           }, 1000)
         }, fail: function () {
