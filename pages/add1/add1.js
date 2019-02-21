@@ -10,6 +10,12 @@ Page({
     sybw: '',
     bz: '',
     gg: '',
+    post1: '',
+    post2: '',
+    post3: '',
+    post4: '',
+    post5: '',
+    post6:'',
     multiIndex: [0, 0],
     multiArray: [[], []],
     objectMultiArray: []
@@ -57,26 +63,31 @@ Page({
     var that = this;
     if (e.currentTarget.dataset.id == 1) {
       this.setData({
-        mcxh: e.detail.value
+        post1: e.detail.value
       })
     }
     if (e.currentTarget.dataset.id == 2) {
       this.setData({
-        jxdj: e.detail.value
+        post2: e.detail.value
       })
     }
     if (e.currentTarget.dataset.id == 3) {
       this.setData({
-        sybw: e.detail.value
+        post3: e.detail.value
       })
     }
     if (e.currentTarget.dataset.id == 4) {
       this.setData({
-        bz: e.detail.value
+        post4: e.detail.value
       })
     } if (e.currentTarget.dataset.id == 5) {
       this.setData({
-        gg: e.detail.value
+        post5: e.detail.value
+      })
+    }
+    if (e.currentTarget.dataset.id == 6) {
+      this.setData({
+        post6: e.detail.value
       })
     }
   },
@@ -132,16 +143,23 @@ Page({
   },
   submit: function () {
     var that = this;
-    var mechanical_name = that.data.mcxh;
+    var mechanical_name = that.data.post1;
     var mechanical_usageTime = that.data.date;
-    var mechanical_unitPrice = that.data.jxdj;
-    var mechanical_Part = that.data.sybw;
-    var mechanical_remarks = that.data.bz;
+    var mechanical_unitPrice = that.data.post4;
+    var mechanical_Part = that.data.post5;
+    var mechanical_remarks = that.data.post6;
     var mechanical_count = that.data.gg;
-    var mechanical_model = that.data.gg;
+    var mechanical_model = that.data.post2; 
 
     var imgs = that.data.pics;
-    if (mechanical_name == '') {
+    if (imgs.length == 0) {
+      wx.showToast({
+        title: ' 请先上传图片',
+        image: '../../image/chacha.png'
+      })
+      return;
+    } 
+    if (mechanical_model == '') {
       wx.showToast({
         title: '信息不完整',
         image: '../../image/chacha.png'

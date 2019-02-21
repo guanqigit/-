@@ -62,6 +62,22 @@
     </view>
     <view class="flex flex-space flex-box flex-centerss">
       <view class="section flex  flex-box">
+        <picker mode="date" value="{{date}}" start="" end="" bindchange="bindDateChange" style='width:100%'>
+          <view class="picker">{{date}}
+          </view>
+        </picker>
+      </view>
+      <view class="flex">
+        <image src="../../image/iconright1.png" class="rightimg"></image>
+      </view>
+    </view>
+  </view>
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+    <view class="flex">
+      <text class="title"> 使用日期</text>
+    </view>
+    <view class="flex flex-space flex-box flex-centerss">
+      <view class="section flex  flex-box">
         <picker mode="date" value="{{date}}" start="" end="" bindchange="bindDateChange">
           <view class="picker">{{date}}
           </view>
@@ -77,7 +93,7 @@
       <text class="title">机械单价</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" data-id="2" />
+      <input bindinput="name" data-id="6" />
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
@@ -93,7 +109,7 @@
       <text class="title">备注</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <textarea class="textarea-v" auto-height="true" bindinput="name" data-id="4" maxlength="1000" cursor-spacing="100"></textarea>
+      <textarea class="textarea-v" auto-height="true" bindinput="name" data-id="4"  cursor-spacing="100"></textarea>
     </view>
   </view>
   <view class="flex  flex-centerss input-box bottom">

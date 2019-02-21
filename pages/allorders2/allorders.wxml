@@ -24,19 +24,19 @@
     </view>
   </view>
   <view class='flex flex-center' style="padding:20rpx 0" wx:if="{{list.length==0&&nav==0}}">暂无数据</view>
-  <view bindtap="goInfo" class="flex flex-row list" wx:for-index="inde" data-id="{{item.arrival_id}}" wx:for="{{list}}" wx:key="" wx:if="{{nav==1}}">
+  <view bindtap="goInfos" class="flex flex-row list" wx:for-index="inde" data-id="{{item.Id}}" wx:for="{{list}}" wx:key="" wx:if="{{nav==1}}">
     <view class="flex flex-center">
-      <image src="{{item.arrival_image}}" class="listimg"></image>
+      <image src="{{item.image}}" class="listimg"></image>
     </view>
     <view class="flex flex-column flex-box" style='overflow:hidden'>
       <view class="flex flex-column title">
-        <text class='text-hiddle'>{{item.arrival_name}}</text>
+        <text class='text-hiddle'>{{item.name}}</text>
         <view class='flex flex-space'>
-          <text style='font-size:26rpx;color:#888'>{{item.arrival_count}}</text>
-          <text style='font-size:25rpx;color:#999'>{{item.arrival_unitPrice}}</text>
+          <text style='font-size:26rpx;color:#888'>{{item.count}}</text>
+          <text style='font-size:25rpx;color:#999'>{{item.price}}</text>
         </view>
         <view class='flex flex-row flex-centers'>
-          <text style='font-size:26rpx;color:#888'>{{item.arrival_Signer}}</text>
+          <text style='font-size:26rpx;color:#888'>{{item.partId}}</text>
         </view>
       </view>
        <view class="flex flex-space flex-end-align flex-box">

@@ -165,6 +165,12 @@ Page({
       url: '../details2/details2?id=' + e.currentTarget.dataset.id,
     })
   },
+  goInfos(e) {
+    var that = this;
+    wx.navigateTo({
+      url: '../details8/details8?id=' + e.currentTarget.dataset.id,
+    })
+  },
   //
   addnew: function () {
     wx.navigateTo({

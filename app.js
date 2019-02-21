@@ -34,6 +34,7 @@ App({
       ClxqGetList: "https://www.wxpaying.com/MaterialDemand/GetList",//材料需求列表
       CljcAdd: "https://www.wxpaying.com/Arrival/Add",//材料情况添加
       ClxqAdd: "https://www.wxpaying.com/MaterialDemand/Add",//材料需求添加
+      ClxqGetModel: "https://www.wxpaying.com/MaterialDemand/GetModel",//材料需求详情
       GetSiteDetails: "https://www.wxpaying.com/Site/GetSiteDetails",//详情
       add1: "https://www.wxpaying.com/MechanicalUse/Add",//机械添加
       add1list: "https://www.wxpaying.com/MechanicalUse/GetList",//机械列表
