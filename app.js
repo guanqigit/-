@@ -38,11 +38,13 @@ App({
       GetSiteDetails: "https://www.wxpaying.com/Site/GetSiteDetails",//详情
       add1: "https://www.wxpaying.com/MechanicalUse/Add",//机械添加
       add1list: "https://www.wxpaying.com/MechanicalUse/GetList",//机械列表
+      jxxqlist: "https://www.wxpaying.com/MechanicalDemand/GetList",//机械需求列表
       add2list: "https://www.wxpaying.com/Safety/GetList",//安全文明施工列表
       add2: "https://www.wxpaying.com/Safety/Add",//安全文明施工添加
       photolist: "https://www.wxpaying.com/ConstructionSite/GetList",//施工现场照片列表
       photoadd: "https://www.wxpaying.com/ConstructionSite/Add",//施工现场照片添加
       GetModel: "https://www.wxpaying.com/MechanicalUse/GetModel",//机械详情
+      JxxqGetModel: "https://www.wxpaying.com/MechanicalDemand/GetModel",//机械需求详情
       clGetModel: "https://www.wxpaying.com/Arrival/GetModel",//材料进场情况详情
       photoGetModel: "https://www.wxpaying.com/ConstructionSite/GetModel",//施工现场照片详情
       wcGetModel: "https://www.wxpaying.com/CompletionWork/GetModel",//施工现场照片详情

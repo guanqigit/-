@@ -10,39 +10,35 @@
     <view class="flex flex-column flex-box list-box">
       <view class="flex flex-space">
         <text class="lefttitle">机械名称：</text>
-        <text class="righttitle flex flex-box">{{infodata.mechanical_name}}</text>
-      </view>
-      <view class="flex flex-space">
-        <text class="lefttitle">机械编号：</text>
-        <text class="righttitle flex flex-box">{{infodata.number}}</text>
+        <text class="righttitle flex flex-box">{{infodata.material_name}}</text>
       </view>
       <view class="flex flex-space">
         <text class="lefttitle">规格型号：</text>
-        <text class="righttitle  flex flex-box">{{infodata.mechanical_model}}</text>
+        <text class="righttitle flex flex-box">{{infodata.material_model}}</text>
       </view>
       <view class="flex flex-space">
-        <text class="lefttitle">经手人：</text>
-        <text class="righttitle flex flex-box">{{infodata.handle}}</text>
+        <text class="lefttitle">数量：</text>
+        <text class="righttitle  flex flex-box">{{infodata.material_count}}</text>
       </view>
       <view class="flex flex-space">
-        <text class="lefttitle">使用日期：</text>
-        <text class="righttitle flex flex-box">{{infodata.useTime}}</text>
+        <text class="lefttitle">单价：</text>
+        <text class="righttitle flex flex-box">{{infodata.material_price}}元</text>
       </view>
       <view class="flex flex-space">
-        <text class="lefttitle">使用时间：</text>
-        <text class="righttitle flex flex-box">{{infodata.mechanical_beginUsageTimeStr}}至{{infodata.mechanical_endUsageTimeStr}}</text>
+        <text class="lefttitle">进场时限：</text>
+        <text class="righttitle flex flex-box">{{infodata.material_time}}</text>
       </view>
       <view class="flex flex-space">
-        <text class="lefttitle">机械单价：</text>
-        <text class="righttitle flex flex-box">{{infodata.mechanical_unitPrice}}</text>
+        <text class="lefttitle">使用时长：</text>
+        <text class="righttitle flex flex-box">{{infodata.material_useTime}}小时</text> 
       </view>
       <view class="flex flex-space">
         <text class="lefttitle">施工部位：</text>
-        <text class="righttitle flex flex-box">{{infodata.mechanical_Part}}</text>
+        <text class="righttitle flex flex-box">{{infodata.material_part}}</text>
       </view>
       <view class="flex flex-space">
         <text class="lefttitle">备注：</text>
-        <text class="righttitle flex flex-box">{{infodata.mechanical_remarks}}</text>
+        <text class="righttitle flex flex-box">{{infodata.material_remark}}</text>
       </view>
     </view>
   </view>

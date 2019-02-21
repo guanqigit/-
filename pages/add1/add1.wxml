@@ -37,7 +37,7 @@
       <text class="title">机械编号</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" data-id="1"/>
+      <input bindinput="name" data-id="1" />
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
@@ -53,12 +53,12 @@
       <text class="title">经手人</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" data-id="5" />
+      <input bindinput="name" data-id="3" />
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
     <view class="flex">
-      <text class="title"> 使用时间</text>
+      <text class="title"> 使用日期</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
       <view class="section flex  flex-box">
@@ -74,12 +74,19 @@
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
     <view class="flex">
-      <text class="title"> 使用日期</text>
+      <text class="title"> 使用时间</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <view class="section flex  flex-box">
-        <picker mode="date" value="{{date}}" start="" end="" bindchange="bindDateChange">
-          <view class="picker">{{date}}
+      <view class="section flex flex-box flex-center">
+        <picker mode="time" value="{{time}}" start="" end="" bindchange="bindTimeChange">
+          <view class="picker">{{time}}
+          </view>
+        </picker>
+      </view>
+      <text>至</text> 
+      <view class="section flex flex-box flex-center">
+        <picker mode="time" value="{{times}}" start="" end="" bindchange="bindTimeChanges">
+          <view class="picker">{{times}}
           </view>
         </picker>
       </view>
@@ -93,7 +100,7 @@
       <text class="title">机械单价</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" data-id="6" />
+      <input bindinput="name" data-id="4" />
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
@@ -101,7 +108,7 @@
       <text class="title">施工部位</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" data-id="3" />
+      <input bindinput="name" data-id="5" />
     </view>
   </view>
   <view class="flex flex-row flex-centerss textarea-box" style="margin-top:20rpx;">
@@ -109,7 +116,7 @@
       <text class="title">备注</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <textarea class="textarea-v" auto-height="true" bindinput="name" data-id="4"  cursor-spacing="100"></textarea>
+      <textarea class="textarea-v" auto-height="true" bindinput="name" data-id="6" cursor-spacing="100"></textarea>
     </view>
   </view>
   <view class="flex  flex-centerss input-box bottom">

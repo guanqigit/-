@@ -13,6 +13,8 @@ Page({
     var that = this;
     that.setData({
       nav: e.currentTarget.dataset.id
+    },function(){
+      that.getlist(that.data.site_id)
     })
   },
   back: function () {
@@ -26,54 +28,99 @@ Page({
     })
   },
   onLoad: function (options) {
+    var that = this;
+    that.setData({
+      id: options.id
+    },function(){
+      that.getlist(options.id);
+    })
+  },
+  getlist:function(postid){
+    var that=this;
     wx.showToast({
       title: '加载中...',
       icon: 'loading',
       duration: 2000
     })
-    var that = this;
-    that.setData({
-      id: options.id
-    })
-    // 再通过setData更改Page()里面的data，动态更新页面的数据  
-    wx.request({
-      url: app.globalData.apiUrl.add1list,
-      data: {
-        openId: app.globalData.openid,
-        site_id: options.id
-      },
-      method: 'POST',
-      header: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      },
-      success: function (res) {
-        console.log(res)
-        var list = [];
-        if (that.data.pageindex == 0) {
-          list = res.data.list;
+    if(that.data.nav==0){
+      wx.request({
+        url: app.globalData.apiUrl.add1list,
+        data: {
+          openId: app.globalData.openid,
+          site_id: postid
+        },
+        method: 'POST',
+        header: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        success: function (res) {
+          console.log(res)
+          var list = [];
+          if (that.data.pageindex == 0) {
+            list = res.data.list;
 
-        } else {
-          list = that.data.list;
-          for (var i = 0; i < res.data.list.length; i++) {
-            list.push(res.data.list[i])
+          } else {
+            list = that.data.list;
+            for (var i = 0; i < res.data.list.length; i++) {
+              list.push(res.data.list[i])
+            }
           }
+          that.setData({
+            list: list,
+            unmber: res.data.totalCount
+          })
+        },
+        fail: function () {
+          wx.showToast({
+            title: '加载失败',
+            image: '../../image/chacha.png',
+            duration: 2000
+          })
+        },
+        complete: function () {
+          wx.hideToast();
         }
-        that.setData({
-          list: list,
-          unmber: res.data.totalCount
-        })
-      },
-      fail: function () {
-        wx.showToast({
-          title: '加载失败',
-          image: '../../image/chacha.png',
-          duration: 2000
-        })
-      },
-      complete: function () {
-        wx.hideToast();
-      }
-    })
+      })
+    }else{
+      wx.request({
+        url: app.globalData.apiUrl.jxxqlist,
+        data: {
+          openId: app.globalData.openid,
+          site_id: postid
+        },
+        method: 'POST',
+        header: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        success: function (res) {
+          console.log(res)
+          var list = [];
+          if (that.data.pageindex == 0) {
+            list = res.data.list;
+
+          } else {
+            list = that.data.list;
+            for (var i = 0; i < res.data.list.length; i++) {
+              list.push(res.data.list[i])
+            }
+          }
+          that.setData({
+            list: list,
+            unmber: res.data.totalCount
+          })
+        },
+        fail: function () {
+          wx.showToast({
+            title: '加载失败',
+            image: '../../image/chacha.png',
+            duration: 2000
+          })
+        },
+        complete: function () {
+          wx.hideToast();
+        }
+      })
+    }
   },
   onShareAppMessage: function () {
     return {
@@ -101,6 +148,12 @@ Page({
     var that = this;
     wx.navigateTo({
       url: '../details1/details1?id=' + e.currentTarget.dataset.id,
+    })
+  },
+  goInfos(e) {
+    var that = this;
+    wx.navigateTo({
+      url: '../details9/details9?id=' + e.currentTarget.dataset.id,
     })
   },
   //

@@ -15,7 +15,9 @@ Page({
     post3: '',
     post4: '',
     post5: '',
-    post6:'',
+    post6: '',
+    time: '00:00',
+    times: '00:00',
     multiIndex: [0, 0],
     multiArray: [[], []],
     objectMultiArray: []
@@ -135,22 +137,35 @@ Page({
       }
     })
   },
-  //使用时间
+  //使用日期
   bindDateChange: function (e) {
     this.setData({
       date: e.detail.value
     })
   },
+  //使用时间
+  bindTimeChange(e) {
+    this.setData({
+      time: e.detail.value
+    })
+  },
+  bindTimeChanges(e) {
+    this.setData({
+      times: e.detail.value
+    })
+  },
   submit: function () {
     var that = this;
-    var mechanical_name = that.data.post1;
+    var mechanical_name = that.data.part_id;
+    var number = that.data.post1;
+    var mechanical_model = that.data.post2;
+    var handle = that.data.post3;
     var mechanical_usageTime = that.data.date;
+    var mechanical_beginUsageTime = that.data.time;
+    var mechanical_endUsageTime = that.data.times;
     var mechanical_unitPrice = that.data.post4;
     var mechanical_Part = that.data.post5;
     var mechanical_remarks = that.data.post6;
-    var mechanical_count = that.data.gg;
-    var mechanical_model = that.data.post2; 
-
     var imgs = that.data.pics;
     if (imgs.length == 0) {
       wx.showToast({
@@ -158,7 +173,7 @@ Page({
         image: '../../image/chacha.png'
       })
       return;
-    } 
+    }
     if (mechanical_model == '') {
       wx.showToast({
         title: '信息不完整',
@@ -172,16 +187,19 @@ Page({
       wx.request({
         url: app.globalData.apiUrl.add1,
         data: {
-          openid: app.globalData.openid,
-          mechanical_name: mechanical_name,
-          mechanical_usageTime: mechanical_usageTime,
-          mechanical_unitPrice: mechanical_unitPrice,
-          mechanical_Part: mechanical_Part,
-          mechanical_remarks: mechanical_remarks,
-          mechanical_count: mechanical_count,
-          mechanical_model: mechanical_model,
-          images: imgs,
-          site_id: that.data.id
+          user_openId: app.globalData.openid,/// 创建者的openId
+          site_id: that.data.id,// 工地Id
+          images: imgs,///图片
+          mechanical_name: mechanical_name,///机械名称
+          number: number,/// 机械编号
+          mechanical_model: mechanical_model,/// 规格型号
+          handle: handle,/// 经手人
+          useTime: mechanical_usageTime,/// 使用日期
+          mechanical_beginUsageTime: mechanical_beginUsageTime,/// 使用开始时间
+          mechanical_endUsageTime: mechanical_endUsageTime,/// 使用结束时间
+          mechanical_unitPrice: mechanical_unitPrice,/// 机械单价
+          mechanical_Part: mechanical_Part,/// 使用部位/使用部位
+          mechanical_remarks: mechanical_remarks,/// 备注
         },
         method: 'POST',
         header: { "Content-Type": "application/x-www-form-urlencoded" },
