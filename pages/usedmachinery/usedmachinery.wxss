@@ -1,11 +1,25 @@
- page {
+page {
   background-color: #fff;
   min-height: 100%;
 }
 
-.icon{
+.icon {
   width: 50rpx;
   height: 50rpx;
   margin-bottom: 10rpx;
   border-radius: 50%;
+}
+
+.sharebtn {
+  font-size: 28rpx;
+  color: #444;
+  background: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-progress-appearance: none;
+  border: none;
+  outline: none;
+}
+.sharebtn::after{
+  border: none;
 }

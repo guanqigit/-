@@ -8,7 +8,7 @@ Page({
     pagesize: 10,
     searchName: '',
     bindgetusercode: false,
-    searchtxt:'',
+    searchtxt: '',
 
   },
   gouserinfo: function () {
@@ -66,12 +66,12 @@ Page({
       })
     }
   },
-  onShow: function () {
-    //
-
-    this.onLoad();
-  },
-  onLoad: function () {
+  // onShow: function () {
+  //   this.onLoad();
+  // },
+  onLoad: function (options) {
+    console.log('1212132313213')
+    console.log(options)
     wx.showToast({
       title: '加载中...',
       icon: 'loading',
@@ -94,8 +94,24 @@ Page({
               "Content-Type": "application/x-www-form-urlencoded"
             },
             success: function (res) {
-              console.log(res)
               app.globalData.openid = res.data.openId;
+              if (options.id) {
+                wx.request({
+                  url: app.globalData.apiUrl.ShareHandle,//获取数据
+                  data: {
+                    auth_initiate: options.openid,/// 发起者的openId auth_initiate 
+                    auth_warrant: res.data.openId,/// 授权者的openId auth_warrant 
+                    site_id: options.id,/// 工程Id site_id 
+                  },
+                  method: 'post',
+                  header: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                  },
+                  success: function () {
+                    console.log('分享授权啦')
+                  }, fail: function () { }
+                });
+              }
               if (res.data.code == 1000) {
                 that.setData({
                   bindgetusercode: true
@@ -103,21 +119,20 @@ Page({
               } else {
                 that.getlist();
               }
-            }, fail: function () {
-            }
+            }, fail: function () { }
           });
         }
       }
     });
 
   },
-  getlist:function(){
+  getlist: function () {
     var that = this;
     wx.request({
       url: app.globalData.apiUrl.indexApi,
       data: {
         openId: app.globalData.openid,
-        site_name:that.data.searchtxt,
+        site_name: that.data.searchtxt,
       },
       method: 'POST',
       header: {

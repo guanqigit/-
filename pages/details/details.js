@@ -125,7 +125,7 @@ Page({
     var eximglist = this.data.merchant_img
     var eximglists = [];
     for (var i = 0; i < eximglist.length; i++) {
-      eximglists.push("http://test.cqmotuoche.cn/" + eximglist[i])
+      eximglists.push(eximglist[i])
     }
     var current = e.target.dataset.src;
     wx.previewImage({

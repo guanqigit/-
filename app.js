@@ -16,7 +16,7 @@ App({
     mername: '',
     storeid: '',
     // 设置全局门店地址信息
-    storedata:[],
+    storedata: [],
     apiUrl: {
       appApi: "https://www.wxpaying.com/OAuthcenter/OAuthcenterIndex",//获取用户appid
       saveuseinfo: "https://www.wxpaying.com/OAuthcenter/NoExistsUser",//保存用户信息
@@ -27,7 +27,7 @@ App({
       UploadImageApi: "https://www.wxpaying.com/FileManage/UploadImage",//上传图片
       SgxcGetList: "https://www.wxpaying.com/LaborSituation/GetList",//施工现场劳动力
       sgload: "https://www.wxpaying.com/LaborSituation/Load",//施工现场劳动力选项加载
-      sgadd:"https://www.wxpaying.com/LaborSituation/Add",//施工现场劳动力添加
+      sgadd: "https://www.wxpaying.com/LaborSituation/Add",//施工现场劳动力添加
       WcgclcGetList: "https://www.wxpaying.com/CompletionWork/GetList",//完成工程量
       WcgclcGetListadd: "https://www.wxpaying.com/CompletionWork/Add",//完成工程量添加
       CljcGetList: "https://www.wxpaying.com/Arrival/GetList",//材料进场情况
@@ -37,6 +37,7 @@ App({
       ClxqGetModel: "https://www.wxpaying.com/MaterialDemand/GetModel",//材料需求详情
       GetSiteDetails: "https://www.wxpaying.com/Site/GetSiteDetails",//详情
       add1: "https://www.wxpaying.com/MechanicalUse/Add",//机械添加
+      JxxqAdd: "https://www.wxpaying.com/MechanicalDemand/Add",//机械需求添加
       add1list: "https://www.wxpaying.com/MechanicalUse/GetList",//机械列表
       jxxqlist: "https://www.wxpaying.com/MechanicalDemand/GetList",//机械需求列表
       add2list: "https://www.wxpaying.com/Safety/GetList",//安全文明施工列表
@@ -59,7 +60,11 @@ App({
       UserPwdShow: "https://www.wxpaying.com/UserManage/UserPwdShow",//密码管理加载
       UserPwdHandle: "https://www.wxpaying.com/UserManage/UserPwdHandle",//密码管理提交
       GetUnit: "https://www.wxpaying.com/Dictionary/GetUnit",//单位加载项
-        
-    }
+      ShareHandle: "https://www.wxpaying.com/WeChatShare/ShareHandle",//分享邀请
+
+    },
+    onLaunch: function (options) {
+      console.log(options)
+    },
   }
 })

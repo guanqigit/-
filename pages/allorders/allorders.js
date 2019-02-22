@@ -14,7 +14,7 @@ Page({
     that.setData({
       nav: e.currentTarget.dataset.id
     },function(){
-      that.getlist(that.data.site_id)
+      that.getlist(that.data.id)
     })
   },
   back: function () {
@@ -136,13 +136,13 @@ Page({
   onReachBottom: function () {
     var that = this;
     that.data.pageindex += 1;
-    that.onLoad();
+    that.getlist(that.data.id);
   },
   //下拉刷新
   onPullDownRefresh: function () {
     var that = this;
     that.data.pageindex = 0;
-    that.onLoad();
+    that.getlist(that.data.id);
   },
   goInfo(e) {
     var that = this;

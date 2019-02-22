@@ -130,9 +130,11 @@ Page({
     var eximglist = this.data.merchant_img
     var eximglists = [];
     for (var i = 0; i < eximglist.length; i++) {
-      eximglists.push("http://test.cqmotuoche.cn/" + eximglist[i])
+      eximglists.push(eximglist[i])
     }
+    console.log(e)
     var current = e.target.dataset.src;
+    console.log(current, eximglists)
     wx.previewImage({
       current: "http://test.cqmotuoche.cn/" + current, // 当前显示图片的http链接
       urls: eximglists // 需要预览的图片http链接列表

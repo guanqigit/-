@@ -70,8 +70,8 @@ Page({
   },
   onShareAppMessage: function () {
     return {
-      title: app.globalData.shares,
-      path: 'pages/index/index',
+      title: '好项目大家一起做',
+      path: 'pages/index/index?id=' + that.data.id + '&openid=' + app.globalData.openid,
       success: function (res) {
       },
       fail: function (res) {

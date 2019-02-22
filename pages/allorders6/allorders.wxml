@@ -28,7 +28,7 @@
       </view>
     </view>
   </view>
-  <view class='flex flex-center' style="padding:20rpx 0" wx:if="{{list.length==0&&nav==1}}">暂无数据</view>
+  <view class='flex flex-center' style="padding:20rpx 0" wx:if="{{list.length==0&&nav==0}}">暂无数据</view>
   <view bindtap="goInfos" class="flex flex-row list" wx:for-index="inde" data-id="{{item.need_id}}" wx:for="{{lists}}" wx:key="" wx:if="{{nav==1}}">
     <view class="flex flex-center">
       <image src="{{item.imagePath}}" class="listimg"></image>

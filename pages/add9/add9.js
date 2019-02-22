@@ -4,9 +4,13 @@ Page({
   data: {
     post1: '',
     post2: '',
-    index:0,
-    array:[],
-    pics:[],
+    post3: '',
+    post4: '',
+    post5: '',
+    post6: '',
+    index: 0,
+    array: [],
+    pics: [],
     multiIndex: [0, 0],
     multiArray: [[], []],
     objectMultiArray: []
@@ -22,6 +26,26 @@ Page({
     if (e.currentTarget.dataset.id == 2) {
       this.setData({
         post2: e.detail.value
+      })
+    }
+    if (e.currentTarget.dataset.id == 3) {
+      this.setData({
+        post3: e.detail.value
+      })
+    }
+    if (e.currentTarget.dataset.id == 4) {
+      this.setData({
+        post4: e.detail.value
+      })
+    }
+    if (e.currentTarget.dataset.id == 5) {
+      this.setData({
+        post5: e.detail.value
+      })
+    }
+    if (e.currentTarget.dataset.id == 6) {
+      this.setData({
+        post6: e.detail.value
       })
     }
   },
@@ -69,11 +93,20 @@ Page({
       }
     })
   },
+  bindDateChange(e) {
+    this.setData({
+      date: e.detail.value
+    })
+  },
   submit: function () {
     var that = this;
-    var laborSituation_count = that.data.post1;
-    var laborSituation_weather = that.data.post2;
-    var part_id = that.data.part_id;
+    var material_name = that.data.part_id;
+    var material_model = that.data.post1;
+    var material_count = that.data.post2;
+    var material_price = that.data.post3;
+    var material_useTime = that.data.post4;
+    var material_part = that.data.post5;
+    var material_remark = that.data.post6;
     var images = that.data.pics;
     if (images.length == 0) {
       wx.showToast({
@@ -81,7 +114,7 @@ Page({
         image: '../../image/chacha.png'
       })
       return;
-    }else if (laborSituation_count == '' || laborSituation_weather == '') {
+    } else if (material_model == '' || material_count == '') {
       wx.showToast({
         title: ' 请填写完整信息',
         image: '../../image/chacha.png'
@@ -92,14 +125,19 @@ Page({
         title: '正在提交',
       })
       wx.request({
-        url: app.globalData.apiUrl.sgadd,
+        url: app.globalData.apiUrl.JxxqAdd,
         data: {
-          openid: app.globalData.openid,
-          laborSituation_count: laborSituation_count,
-          laborSituation_weather: laborSituation_weather,
-          part_id: part_id,
-          site_id: that.data.id,
-          images: images
+          openId: app.globalData.openid,
+          images: images,
+          site_id: that.data.id,/// 工程Id 
+          material_name: material_name,/// 名称 material_name 
+          material_model: material_model,/// 规格型号 material_model 
+          material_count: material_count,/// 数量 material_count 
+          material_price: material_price,/// 单价 material_price 
+          material_time: that.data.date,/// 进场时限 material_time 
+          material_useTime: material_useTime,/// 时间 material_useTime 
+          material_part: material_part,/// 施工部位 material_part 
+          material_remark: material_remark,/// 备注 material_remark 
         },
         method: 'POST',
         header: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -111,7 +149,7 @@ Page({
           })
           setTimeout(function () {
             wx.navigateTo({
-              url: '../allorders6/allorders?id=' + that.data.id + '&type=1',
+              url: '../allorders/allorders?id=' + that.data.id + '&type=1',
             })
           }, 1000)
         }, fail: function () {
@@ -134,7 +172,7 @@ Page({
     })
   },
   bindMultiPickerColumnChange: function (e) {
-    var that=this;
+    var that = this;
     switch (e.detail.column) {
       case 0:
         var list = []
@@ -153,8 +191,10 @@ Page({
   },
   onLoad: function (options) {
     var that = this;
+    var time = new Date().getFullYear() + '-' + ((new Date().getMonth()) + 1) + '-' + new Date().getDate();
     that.setData({
-      id: options.id
+      id: options.id,
+      date: time
     })
     wx.request({
       url: app.globalData.apiUrl.sgload,
@@ -163,7 +203,7 @@ Page({
       header: { "Content-Type": "application/x-www-form-urlencoded" },
       success: function (res) {
         for (var i = 0; i < res.data.list.length; i++) {
-          that.data.multiArray[0].push([res.data.list[i].part_name], )
+          that.data.multiArray[0].push([res.data.list[i].part_name])
           for (var s = 0; s < res.data.list[i].item.length; s++) {
             that.data.objectMultiArray.push({
               'id': res.data.list[i].item[s].part_id,
@@ -182,7 +222,7 @@ Page({
           part_id: res.data.list[0].item[0].part_id
         })
       }, fail: function () {
-        
+
       },
       complete: function () {
 

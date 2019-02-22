@@ -37,8 +37,8 @@
     </view>
     <view class="flex flex-space flex-box flex-centerss">
       <view class="flex flex-space flex-box flex-centerss">
-       <input data-id="1" />
-    </view>
+        <input data-id="1" bindinput='name' value='{{post1}}' />
+      </view>
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
@@ -46,7 +46,7 @@
       <text class="title">数量</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-       <input data-id="1" type='number'/>
+      <input data-id="2" bindinput='name' value='{{post2}}' type='number' />
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
@@ -54,7 +54,7 @@
       <text class="title">单价/元</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input data-id="1" />
+      <input data-id="3" bindinput='name' value='{{post3}}' type='digit' />
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
@@ -62,7 +62,9 @@
       <text class="title">进场时限</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input data-id="1" type='number'/>
+      <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+        <view class="picker">{{date}}</view>
+      </picker>
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
@@ -70,7 +72,7 @@
       <text class="title">使用时长/小时</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input data-id="1"/>
+      <input data-id="4" bindinput='name' value='{{post4}}' type='digit' />
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
@@ -78,9 +80,7 @@
       <text class="title">施工部位</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
-        <view class="picker">{{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}}</view>
-      </picker>
+      <input data-id="5" bindinput='name' value='{{post5}}' />
     </view>
   </view>
   <view class="flex flex-row input-box" style="margin-top:20rpx;height:auto;padding:20rpx 10rpx;">
@@ -88,7 +88,7 @@
       <text class="title">备注</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <textarea class="textarea-v" auto-height="true"  bindinput="name" data-id="2" cursor-spacing="100"></textarea>
+      <textarea class="textarea-v" auto-height="true" bindinput="name" data-id="6" value='{{post6}}' cursor-spacing="100"></textarea>
     </view>
   </view>
   <view class="flex  flex-centerss input-box bottom">

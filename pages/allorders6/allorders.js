@@ -12,7 +12,14 @@ Page({
   nav:function(e){
     var that=this;
     that.setData({
-      nav:e.currentTarget.dataset.id
+      nav:e.currentTarget.dataset.id,
+      pageindex:0
+    },function(){
+      if(e.currentTarget.dataset.id==0){
+        that.getlsit(that.data.id)
+      }else{
+        that.getlsits(that.data.id)
+      }
     })
     
   },
