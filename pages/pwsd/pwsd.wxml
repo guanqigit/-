@@ -5,7 +5,7 @@
   </view>
   <view class='flex flex-space flex-centers item'>
     <text class='lable'>密码：</text>
-    <input type='text' password="true" class='flex flex-box input' value='{{psd}}' placeholder='请输入后台管理密码' bindinput='psd'></input>
+    <input type='text' password="true" maxlength='6' class='flex flex-box input' value='{{psd}}' placeholder='请输入后台管理密码' bindinput='psd'></input>
   </view>
   <view class='flex flex-center btn' bindtap='submit'>提交</view>
 </view>

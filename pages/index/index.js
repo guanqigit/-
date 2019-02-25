@@ -70,7 +70,6 @@ Page({
   //   this.onLoad();
   // },
   onLoad: function (options) {
-    console.log('1212132313213')
     console.log(options)
     wx.showToast({
       title: '加载中...',
@@ -95,7 +94,7 @@ Page({
             },
             success: function (res) {
               app.globalData.openid = res.data.openId;
-              if (options.id) {
+              if (options.id && options.openid != res.data.openId) {
                 wx.request({
                   url: app.globalData.apiUrl.ShareHandle,//获取数据
                   data: {

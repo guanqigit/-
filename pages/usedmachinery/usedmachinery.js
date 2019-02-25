@@ -7,13 +7,39 @@ Page({
     pageindex: 0,
     pagesize: 10,
     searchName: '',
+    btncode: false
   },
   onLoad: function (options) {
     var that = this;
-    that.setData({
-      id: options.id,
-      projuctname: options.name,
+    wx.request({
+      url: app.globalData.apiUrl.JudgeProject,
+      data: {
+        openId: app.globalData.openid,
+        site_id: options.id,
+      },
+      method: 'POST',
+      header: { "Content-Type": "application/x-www-form-urlencoded" },
+      success: function (res) {
+        console.log(res)
+        if (res.data.code == 0) {
+          that.setData({
+            btncode: true
+          })
+        }else{
+          wx.hideShareMenu()
+        }
+        that.setData({
+          id: options.id,
+          projuctname: options.name,
+        })
+      }, fail: function () {
+
+      },
+      complete: function () {
+
+      }
     })
+
   },
   nav1: function () {
     var that = this;
@@ -63,20 +89,21 @@ Page({
     })
   },
   nav9: function () {
-    var that=this;
+    var that = this;
     wx.navigateTo({
       url: '../details/details?id=' + that.data.id,
     })
   },
   onShareAppMessage: function () {
+    var that=this;
     return {
       title: '好项目大家一起做',
-      path: 'pages/index/index?id=' + that.data.id + '&openid=' + app.globalData.openid,
+      path: '/pages/index/index?id=' + that.data.id + '&openid=' + app.globalData.openid,
       success: function (res) {
       },
       fail: function (res) {
       }
     }
   },
-  
+
 })

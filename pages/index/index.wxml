@@ -1,5 +1,6 @@
 <view class="container">
-  <view class="flex flex-centerss  flex-row header">
+  <image src='../../image/gcbg.png' class='gcbg'></image>
+  <view class="flex flex-centers  flex-row flex-end header">
     <input class="whilte" type="text" bindconfirm="searchs" placeholder='搜索你想浏览的工程' bindinput="search" />
     <image src="../../image/user.png" class="back" bindtap="gouserinfo"></image>
   </view>
@@ -7,33 +8,16 @@
     <view data-id="{{item.site_id}}" class='flex flex-row flex-box'>
       <view class="flex flex-center" style='position:relative'>
         <image src="{{item.site_image}}" class="listimg"></image>
-        <text style='padding:10rpx 40rpx;background:rgba(000,000,000,0.6);color:#fff;font-size:30rpx;left:0;top:0;position:absolute'>{{item.status==0?'个人':'授权'}}</text>
+        <text style='padding:5rpx 20rpx;background:rgba(000,000,000,0.38);color:#fff;font-size:24rpx;left:0;top:0;position:absolute'>{{item.status==0?'我创建的':'我参与的'}}</text>
       </view>
-      <view class="flex flex-column flex-box" style='overflow:hidden'>
-        <view class="flex flex-column title">
-          <text class='text-hiddle'>{{item.site_name}}</text>
-          <view class='flex flex-space'>
-            <text style='font-size:26rpx;color:#888'>{{item.site_companyName}}</text>
-            <text style='font-size:25rpx;color:#999'>{{item.site_companyContact}}</text>
-          </view>
-          <view class='flex flex-row flex-centers'>
-            <text style='font-size:26rpx;color:#888;width:100%' class='text-hiddle'>{{item.site_address}}</text>
-          </view>
-          <view class='flex flex-row flex-centers'>
-            <text style='font-size:26rpx;color:#888'>{{item.site_createTime}}</text>
-          </view>
-          <!--<view class='flex flex-row'>
-            <text class='lable'>临街</text>
-          </view>
-          <view class='flex flex-row flex-centeres flex-end-align'>
-            <text style='font-size:35rpx;color:red'>546</text>
-            <text style='font-size:28rpx;color:red'>万</text>
-          </view>-->
-        </view>
+      <view class="flex flex-column flex-space flex-box title" style='overflow:hidden'>
+        <text>项目名称：{{item.site_name}}</text>
+        <text>总包单位：{{item.site_constructionName}}</text>
+        <text>造价：{{item.site_projectCosts}}</text>
       </view>
     </view>
-    <view class='flex flex-center' style="padding:20rpx 0" wx:if="{{list.length==0}}">暂无数据</view>
   </view>
+  <view class='flex flex-center' style="padding:20rpx 0" wx:if="{{list.length==0}}">暂无数据</view>
   <view class='flex flex-center' wx:if="{{bindgetusercode}}">
     <button open-type='getUserInfo' class='model-btn' lang="zh_CN" bindgetuserinfo="onGotUserInfo">前往授权</button>
   </view>
