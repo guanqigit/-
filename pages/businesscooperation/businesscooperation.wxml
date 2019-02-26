@@ -228,7 +228,7 @@
     </view>
     <view class="flex flex-space flex-box flex-centerss">
       <view class="section flex  flex-box">
-        <picker mode="date" value="{{dates}}" start="" end="" bindchange="bindDateChange">
+        <picker mode="date" value="{{dates}}" start="" end="" bindchange="bindDateChanges">
           <view class="picker">{{dates}}
           </view>
         </picker>

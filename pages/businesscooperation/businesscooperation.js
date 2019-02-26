@@ -210,6 +210,11 @@ Page({
       date: e.detail.value
     })
   },
+  bindDateChanges: function (e) {
+    this.setData({
+      dates: e.detail.value
+    })
+  },
   submit: function () {
     var that = this;
     var site_name = that.data.gcname;
@@ -321,6 +326,11 @@ Page({
   },
   onLoad: function () {
     var that = this;
+    var time = new Date().getFullYear() + '-' + ((new Date().getMonth()) + 1) + '-' + new Date().getDate();
+    that.setData({
+      date:time,
+      dates:time,
+    })
     // wx.request({
     //   url: app.globalData.apiUrl.GetSiteType,
     //   data: {},
