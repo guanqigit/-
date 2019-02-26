@@ -239,22 +239,25 @@ Page({
     var imgs = that.data.pics;
     if (imgs == '') {
       wx.showToast({
-        title: '请先上传图片',
-        image: '../../image/chacha.png'
+        title: ' 请上传图片',
+        icon: 'none',
+        mask: true
       })
       return;
     }
     if (imgs.length > 10) {
       wx.showToast({
         title: '请最多上传10张图片',
-        image: '../../image/chacha.png'
+        icon: 'none',
+        mask: true
       })
       return;
     }
     if (site_name == '') {
       wx.showToast({
-        title: '工程名称为空',
-        image: '../../image/chacha.png'
+        title: ' 请填写工程名称',
+        icon: 'none',
+        mask: true
       })
       return;
     } else {

@@ -108,8 +108,9 @@ Page({
       return;
     }else if (safety_modify == '') {
       wx.showToast({
-        title: ' 信息不完整',
-        image: '../../image/chacha.png'
+        title: ' 请上传图片',
+        icon: 'none',
+        mask: true
       })
       return;
     } else {

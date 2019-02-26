@@ -110,14 +110,24 @@ Page({
     var images = that.data.pics;
     if (images.length == 0) {
       wx.showToast({
-        title: ' 请先上传图片',
-        image: '../../image/chacha.png'
+        title: ' 请上传图片',
+        icon: 'none',
+        mask: true
       })
       return;
-    } else if (material_model == '' || material_count == '') {
+    } else if (material_model == '') {
       wx.showToast({
-        title: ' 请填写完整信息',
-        image: '../../image/chacha.png'
+        title: ' 请填写规格型号',
+        icon: 'none',
+        mask: true
+      })
+      return;
+    } 
+    else if (material_count == '') {
+      wx.showToast({
+        title: ' 请填写数量',
+        icon: 'none',
+        mask: true
       })
       return;
     } else {

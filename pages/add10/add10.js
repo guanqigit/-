@@ -95,10 +95,19 @@ Page({
     var part = that.data.userbw;
     var remark = that.data.mess;
     var images = that.data.pics;
+    if (images.length == 0) {
+      wx.showToast({
+        title: ' 请上传图片',
+        icon: 'none',
+        mask: true
+      })
+      return;
+    }
     if (laborSituation_weather == '') {
       wx.showToast({
-        title: ' 请填写完整信息',
-        image: '../../image/chacha.png'
+        title: '请填写人员数量',
+        icon: 'none',
+        mask: true
       })
       return;
     } else {

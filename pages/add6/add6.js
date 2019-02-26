@@ -89,13 +89,30 @@ Page({
     var images = that.data.pics;
     var part_name = that.data.post3;
     var site_remark = that.data.post4;
-    if (laborSituation_weather == '' || part_name == '') {
+    if (images.length == 0) {
       wx.showToast({
-        title: ' 请填写完整信息',
-        image: '../../image/chacha.png'
+        title: ' 请上传图片',
+        icon: 'none',
+        mask:true
       })
       return;
-    } else {
+    }
+    if (part_name == '') {
+      wx.showToast({
+        title: ' 请填写班组人数',
+        icon: 'none',
+        mask: true
+      })
+      return;
+    } else if (laborSituation_weather == '') {
+      wx.showToast({
+        title: ' 请填写施工部位',
+        icon: 'none',
+        mask: true
+      })
+      return;
+    }
+    else {
       wx.showLoading({
         title: '正在提交',
       })

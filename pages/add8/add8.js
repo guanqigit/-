@@ -142,13 +142,22 @@ Page({
     var images = that.data.pics;
     if (images.length == 0) {
       wx.showToast({
-        title: ' 请先上传图片',
-        image: '../../image/chacha.png'
+        title: ' 请上传图片',
+        icon: 'none',
+        mask: true
       })
       return;
-    } else if (name == '' || count == '') {
+    } else if (name == '') {
       wx.showToast({
-        title: ' 请填写完整信息',
+        title: ' 请填写材料名称',
+        icon: 'none',
+        mask: true
+      })
+      return;
+    } 
+    else if (count == '') {
+      wx.showToast({
+        title: ' 请填写数量',
         image: '../../image/chacha.png'
       })
       return;

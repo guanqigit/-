@@ -166,14 +166,32 @@ Page({
     if (images.length == 0) {
       wx.showToast({
         title: ' 请上传图片',
-        image: '../../image/chacha.png'
+        icon: 'none',
+        mask: true
       })
       return;
     }
-    if (arrival_name == '' || arrival_count == '' || arrival_unitPrice == '') {
+    if (arrival_name == '') {
       wx.showToast({
-        title: ' 请填写完整信息',
-        image: '../../image/chacha.png'
+        title: ' 请填写材料名称',
+        icon: 'none',
+        mask: true
+      })
+      return;
+    } 
+    if (arrival_count == '') {
+      wx.showToast({
+        title: ' 请填写数量',
+        icon: 'none',
+        mask: true
+      })
+      return;
+    } 
+    if (arrival_unitPrice == '') {
+      wx.showToast({
+        title: ' 请填写单价',
+        icon: 'none',
+        mask: true
       })
       return;
     } else {

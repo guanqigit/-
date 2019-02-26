@@ -85,33 +85,38 @@ Page({
     var images = that.data.pics;
     if (images.length == 0) {
       wx.showToast({
-        title: ' 请先上传图片',
-        image: '../../image/chacha.png'
+        title: ' 请上传图片',
+        icon: 'none',
+        mask: true
       })
       return;
     } else if (work_workload == '') {
       wx.showToast({
-        title: ' 请填写完整信息',
-        image: '../../image/chacha.png'
+        title: ' 请填写施工部位',
+        icon: 'none',
+        mask: true
       })
       return;
     } 
     else if (work_today == '') {
       wx.showToast({
-        title: ' 请填写完整信息',
-        image: '../../image/chacha.png'
+        title: ' 请填写今天施工进度完成情况',
+        icon: 'none',
+        mask: true
       })
       return;
     } else if (work_tomorrow == '') {
       wx.showToast({
-        title: ' 请填写完整信息',
-        image: '../../image/chacha.png'
+        title: ' 请填写明天的计划安排',
+        icon: 'none',
+        mask: true
       })
       return;
     } else if (work_coordination == '') {
       wx.showToast({
-        title: ' 请填写完整信息',
-        image: '../../image/chacha.png'
+        title: ' 请填写协调解决的问题',
+        icon: 'none',
+        mask: true
       })
       return;
     } else {

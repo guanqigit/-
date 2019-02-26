@@ -169,15 +169,17 @@ Page({
     var imgs = that.data.pics;
     if (imgs.length == 0) {
       wx.showToast({
-        title: ' 请先上传图片',
-        image: '../../image/chacha.png'
+        title: ' 请上传图片',
+        icon: 'none',
+        mask: true
       })
       return;
     }
     if (mechanical_model == '') {
       wx.showToast({
-        title: '信息不完整',
-        image: '../../image/chacha.png'
+        title: ' 请填写规格型号',
+        icon: 'none',
+        mask: true
       })
       return;
     } else {
