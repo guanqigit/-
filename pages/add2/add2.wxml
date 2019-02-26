@@ -58,7 +58,7 @@
       <text class="title">施工部位</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" data-id="2" />
+      <input bindinput="name" data-id="3" />
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;height:auto;padding:20rpx 10rpx;">
@@ -66,7 +66,7 @@
       <text class="title">备注</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <textarea class="textarea-v" auto-height="true"  bindinput="name" data-id="2" cursor-spacing="100"></textarea>
+      <textarea class="textarea-v" auto-height="true"  bindinput="name" data-id="4" cursor-spacing="100"></textarea>
     </view>
   </view>
   <view class="flex  flex-centerss input-box bottom">

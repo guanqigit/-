@@ -31,6 +31,16 @@ Page({
         jxdj: e.detail.value
       })
     }
+    if (e.currentTarget.dataset.id == 3) {
+      this.setData({
+        sybw: e.detail.value
+      })
+    }
+    if (e.currentTarget.dataset.id == 4) {
+      this.setData({
+        bz: e.detail.value
+      })
+    }
   },
   //使用时间
   bindDateChange: function (e) {
@@ -87,6 +97,8 @@ Page({
     var safety_modify = that.data.mcxh;
     var safety_completeTime = that.data.date;
     var safety_coordination = that.data.jxdj;
+    var sitePart = that.data.sybw;
+    var remark = that.data.bz;
     var images=that.data.pics;
     if (images.length == 0) {
       wx.showToast({
@@ -96,7 +108,7 @@ Page({
       return;
     }else if (safety_modify == '') {
       wx.showToast({
-        title: ' 需要整改的安全问题',
+        title: ' 信息不完整',
         image: '../../image/chacha.png'
       })
       return;
@@ -107,12 +119,15 @@ Page({
       wx.request({
         url: app.globalData.apiUrl.add2,
         data: {
-          openid: app.globalData.openid,
-          safety_modify: safety_modify,
-          safety_completeTime: safety_completeTime,
-          safety_coordination: safety_coordination,
-          site_id: that.data.id,
-          images: images
+          openId: app.globalData.openid,/// 创建者的openId
+          site_id: that.data.id,/// 工地Id
+          images: images,
+          safety_modify: safety_modify, /// 需要整改的安全问题 
+          safety_completeTime: safety_completeTime, /// 预计完成整改的时间
+          safety_coordination: safety_coordination, /// 完成整改需要协调的问题
+          sitePart: sitePart,/// 施工部位 sitePart 
+          remark: remark,/// 备注 remark  
+
         },
         method: 'POST',
         header: { "Content-Type": "application/x-www-form-urlencoded" },

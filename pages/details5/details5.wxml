@@ -22,11 +22,11 @@
       </view>
       <view class="flex flex-space">
         <text class="lefttitle">施工部位：</text>
-        <text class="righttitle flex flex-box">{{infodata.safety_completeTimeStr}}</text>
+        <text class="righttitle flex flex-box">{{infodata.sitePart}}</text>
       </view>
       <view class="flex flex-space">
         <text class="lefttitle">备注：</text>
-        <text class="righttitle flex flex-box">{{infodata.safety_coordination}}</text>
+        <text class="righttitle flex flex-box">{{infodata.remark}}</text>
       </view>
     </view>
   </view>
