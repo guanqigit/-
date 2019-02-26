@@ -192,18 +192,18 @@
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
     <view class="flex">
-      <text class="title">建筑面积</text>
+      <text class="title">建筑面积/m²</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" data-id="18" type='number'/>
+      <input bindinput="name" data-id="18" type='digit'/>
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
     <view class="flex">
-      <text class="title">工程造价</text>
+      <text class="title">工程造价/万元</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" data-id="19" type='number'/>
+      <input bindinput="name" data-id="19" type='digit'/>
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">

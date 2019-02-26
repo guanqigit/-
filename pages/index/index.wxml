@@ -13,7 +13,7 @@
       <view class="flex flex-column flex-space flex-box title" style='overflow:hidden'>
         <text>项目名称：{{item.site_name}}</text>
         <text>总包单位：{{item.site_constructionName}}</text>
-        <text>造价：{{item.site_projectCosts}}</text>
+        <text>造价：{{item.site_projectCosts}}万元</text>
       </view>
     </view>
   </view>

@@ -86,11 +86,11 @@
       </view>
       <view class="flex flex-space">
         <text class="lefttitle">建筑面积：</text>
-        <text class="righttitle flex flex-box">{{infodata.site_constructionArea}}</text>
+        <text class="righttitle flex flex-box">{{infodata.site_constructionArea}}m²</text>
       </view>
       <view class="flex flex-space">
         <text class="lefttitle">工程造价：</text>
-        <text class="righttitle flex flex-box">{{infodata.site_projectCosts}}</text>
+        <text class="righttitle flex flex-box">{{infodata.site_projectCosts}}万元</text>
       </view>
       <view class="flex flex-space">
         <text class="lefttitle">开工日期：</text>

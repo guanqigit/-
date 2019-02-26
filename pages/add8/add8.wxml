@@ -65,7 +65,7 @@
       <text class="title">数量</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input data-id="3" type='number' value='{{post3}}' bindinput='setdata'/>
+      <input data-id="3" type='digit' value='{{post3}}' bindinput='setdata'/>
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">

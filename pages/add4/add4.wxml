@@ -80,15 +80,15 @@
       <text class="title">数量</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" type='number' data-id="6" value='{{post6}}'/>
+      <input bindinput="name" type='digit' data-id="6" value='{{post6}}'/>
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
     <view class="flex">
-      <text class="title">单价</text>
+      <text class="title">单价/元</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" type='number' data-id="7" value='{{post7}}'/>
+      <input bindinput="name" type='digit' data-id="7" value='{{post7}}'/>
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
