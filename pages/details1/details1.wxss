@@ -12,6 +12,8 @@ page {
 .slide-image {
   width: 100%;
   height: 500rpx;
+  background-size:cover; 
+  background-repeat: no-repeat;
 }
 .line-item{
   width: 45%;

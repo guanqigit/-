@@ -23,7 +23,7 @@
       <text class="title">需要整改的安全问题</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-       <textarea class="textarea-v" auto-height="true"  bindinput="name" data-id="1" cursor-spacing="100"></textarea>
+       <textarea class="textarea-v" auto-height="true" show-confirm-bar="{{false}}" bindinput="name" data-id="1" cursor-spacing="100"></textarea>
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
@@ -47,7 +47,7 @@
       <text class="title">完成整改需要协调的问题</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-       <textarea class="textarea-v" auto-height="true"  bindinput="name" data-id="2" cursor-spacing="100"></textarea>
+       <textarea class="textarea-v" auto-height="true" show-confirm-bar="{{false}}"  bindinput="name" data-id="2" cursor-spacing="100"></textarea>
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
@@ -63,7 +63,7 @@
       <text class="title">备注</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <textarea class="textarea-v" auto-height="true"  bindinput="name" data-id="4" cursor-spacing="100"></textarea>
+      <textarea class="textarea-v" auto-height="true" show-confirm-bar="{{false}}" bindinput="name" data-id="4" cursor-spacing="100"></textarea>
     </view>
   </view>
   <view class="flex  flex-centerss input-box bottom">

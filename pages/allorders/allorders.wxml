@@ -15,7 +15,7 @@
           <text style='font-size:26rpx;color:#888'>{{item.mechanical_Part}}</text>
         </view>
         <view class='flex flex-row flex-centeres flex-end-align'>
-          <text style='font-size:35rpx;color:red'>{{item.mechanical_unitPrice}}</text>
+          <text style='font-size:35rpx;color:red'>{{item.mechanical_unitPrice}}元</text>
         </view>
       </view>
       <view class="flex flex-space flex-end-align flex-box">
@@ -36,7 +36,7 @@
           <text style='font-size:26rpx;color:#888'>{{item.material_part}}</text>
         </view>
         <view class='flex flex-row flex-centeres flex-end-align'>
-          <text style='font-size:35rpx;color:red'>{{item.material_price}}</text>
+          <text style='font-size:35rpx;color:red'>{{item.material_price}}元</text>
         </view>
       </view>
       <view class="flex flex-space flex-end-align flex-box">
