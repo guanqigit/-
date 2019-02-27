@@ -42,6 +42,7 @@ Page({
 
   },
   goback:function(){
+    var that=this;
     wx.showModal({
       title: '提示',
       content: '确定要退出该项目吗？',
@@ -53,7 +54,34 @@ Page({
         if (res.cancel) {
           //点击取消,默认隐藏弹框
         } else {
-          //点击确定
+          wx.request({
+            url: app.globalData.apiUrl.CancelShareHandle,
+            data: {
+              openId: app.globalData.openid,
+              site_id: that.data.id,
+            },
+            method: 'POST',
+            header: { "Content-Type": "application/x-www-form-urlencoded" },
+            success: function (res) {
+              if (res.data.code == 0) {
+                wx.showToast({
+                  title: '已成功退出该项目',
+                  icon:'none',
+                  mask:true,
+                  success:function(){
+                    wx.navigateTo({
+                      url: '../index/index',
+                    })
+                  }
+                })
+              }
+            }, fail: function () {
+
+            },
+            complete: function () {
+
+            }
+          })
           
         }
       },

@@ -62,6 +62,7 @@ App({
       // GetUnit: "https://www.iant.cn/workcalendar/Dictionary/GetUnit",//单位加载项
       // ShareHandle: "https://www.iant.cn/workcalendar/WeChatShare/ShareHandle",//分享邀请
       // JudgeProject: "https://www.iant.cn/workcalendar/Home/JudgeProject",//判断是否是自己的项目
+      //CancelShareHandle: "https://www.iant.cn/workcalendar/WeChatShare/CancelShareHandle",//退出项目
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -109,6 +110,7 @@ App({
       GetUnit: "https://www.wxpaying.com/Dictionary/GetUnit",//单位加载项
       ShareHandle: "https://www.wxpaying.com/WeChatShare/ShareHandle",//分享邀请
       JudgeProject: "https://www.wxpaying.com/Home/JudgeProject",//判断是否是自己的项目
+      CancelShareHandle: "https://www.wxpaying.com/WeChatShare/CancelShareHandle",//退出项目
 
     },
     onLaunch: function (options) {
