@@ -46,7 +46,7 @@ Page({
       title: '提示',
       content: '确定要退出该项目吗？',
       cancelText: "取消",//默认是“取消”
-      cancelColor: 'skyblue',//取消文字的颜色
+      cancelColor: '#000',//取消文字的颜色
       confirmText: "确定",//默认是“确定”
       confirmColor: 'skyblue',//确定文字的颜色
       success: function (res) {
