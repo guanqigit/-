@@ -298,6 +298,7 @@ Page({
           site_startTime: site_startTime,//开工日期
           site_completion: site_completion,//计划竣工日期
           images: imgs,
+          site_location:that.data.latitude+','+that.data.longitude,
         },
         method: 'POST',
         header: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -330,6 +331,15 @@ Page({
     that.setData({
       date:time,
       dates:time,
+    })
+    wx.getLocation({
+      type: 'wgs84',
+      success(res) {
+        that.setData({
+        latitude:res.latitude,
+        longitude : res.longitude
+        })
+      }
     })
     // wx.request({
     //   url: app.globalData.apiUrl.GetSiteType,

@@ -82,45 +82,45 @@ Page({
     wx.login({
       success: function (data) {
         console.log(data.code)
-        // if (data.code) {
-        //   wx.request({
-        //     url: app.globalData.apiUrl.appApi,//获取数据
-        //     data: {
-        //       code: data.code,
-        //     },
-        //     method: 'post',
-        //     header: {
-        //       "Content-Type": "application/x-www-form-urlencoded"
-        //     },
-        //     success: function (res) {
-        //       app.globalData.openid = res.data.openId;
-        //       if (options.id && options.openid != res.data.openId) {
-        //         wx.request({
-        //           url: app.globalData.apiUrl.ShareHandle,//获取数据
-        //           data: {
-        //             auth_initiate: options.openid,/// 发起者的openId auth_initiate 
-        //             auth_warrant: res.data.openId,/// 授权者的openId auth_warrant 
-        //             site_id: options.id,/// 工程Id site_id 
-        //           },
-        //           method: 'post',
-        //           header: {
-        //             "Content-Type": "application/x-www-form-urlencoded"
-        //           },
-        //           success: function () {
-        //             console.log('分享授权啦')
-        //           }, fail: function () { }
-        //         });
-        //       }
-        //       if (res.data.code == 1000) {
-        //         that.setData({
-        //           bindgetusercode: true
-        //         })
-        //       } else {
-        //         that.getlist();
-        //       }
-        //     }, fail: function () { }
-        //   });
-        // }
+        if (data.code) {
+          wx.request({
+            url: app.globalData.apiUrl.appApi,//获取数据
+            data: {
+              code: data.code,
+            },
+            method: 'post',
+            header: {
+              "Content-Type": "application/x-www-form-urlencoded"
+            },
+            success: function (res) {
+              app.globalData.openid = res.data.openId;
+              if (options.id && options.openid != res.data.openId) {
+                wx.request({
+                  url: app.globalData.apiUrl.ShareHandle,//获取数据
+                  data: {
+                    auth_initiate: options.openid,/// 发起者的openId auth_initiate 
+                    auth_warrant: res.data.openId,/// 授权者的openId auth_warrant 
+                    site_id: options.id,/// 工程Id site_id 
+                  },
+                  method: 'post',
+                  header: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                  },
+                  success: function () {
+                    console.log('分享授权啦')
+                  }, fail: function () { }
+                });
+              }
+              if (res.data.code == 1000) {
+                that.setData({
+                  bindgetusercode: true
+                })
+              } else {
+                that.getlist();
+              }
+            }, fail: function () { }
+          });
+        }
       }
     });
 
