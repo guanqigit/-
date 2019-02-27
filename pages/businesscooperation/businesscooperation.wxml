@@ -15,11 +15,8 @@
   <view class="flex flex-wrap">
     <view class="flex" wx:for="{{pics}}" wx:key="" style="position:relative">
       <image src="{{item}}" class="imgs"></image>
-      <image src="../../image/detail-rea1.png" data-index="{{index}}" bindtap="remove" style="border-radius: 50%;position:absolute;top:5rpx;right:5rpx;width:20rpx;height:20rpx;padding:10rpx;background:rgba(255,255,255,.8)"></image>
+      <image src="../../image/detail-rea1.png" data-index="{{index}}" bindtap="remove" style="border-radius: 50%;position:absolute;top:10rpx;right:10rpx;width:20rpx;height:20rpx;padding:20rpx;background:rgba(255,255,255,.8)"></image>
     </view>
-  </view>
-  <view class="flex info">
-    <text class="orange">您今天还可免费发布两条，当月可免发布两条</text>
   </view>
   <view class="flex" style="padding:10rpx 0;background:#fff;margin:10rpx 0 20rpx 0;"></view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
@@ -212,7 +209,7 @@
     </view>
     <view class="flex flex-space flex-box flex-centerss">
       <view class="section flex  flex-box">
-        <picker mode="date" value="{{date}}" start="" end="" bindchange="bindDateChange">
+        <picker mode="date" value="{{date}}" start="" end="" bindchange="bindDateChange" style='width:100%'>
           <view class="picker">{{date}}
           </view>
         </picker>
@@ -228,7 +225,7 @@
     </view>
     <view class="flex flex-space flex-box flex-centerss">
       <view class="section flex  flex-box">
-        <picker mode="date" value="{{dates}}" start="" end="" bindchange="bindDateChanges">
+        <picker mode="date" value="{{dates}}" start="" end="" bindchange="bindDateChanges" style='width:100%'>
           <view class="picker">{{dates}}
           </view>
         </picker>

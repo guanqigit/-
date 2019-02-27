@@ -2,7 +2,7 @@
   <swiper class="lunb" indicator-dots="true" autoplay="true" interval="3000" duration="3000">
     <block wx:for="{{merchant_img}}" wx:key=''>
       <swiper-item>
-        <image src="{{item}}" class="slide-image" data-src='{{item}}' mode="aspectFill" bindtap="preview" />
+        <view style='background-image:url({{item}})' class="slide-image" data-src='{{item}}' bindtap="preview"></view>
       </swiper-item>
     </block>
   </swiper>
@@ -65,4 +65,4 @@
     </view>
   </view>-->
 </view>
-<view class='flex flex-center' style='position:fixed;bottom:0;left:0;width:100%;text-align:center;font-size:30rpx;color:#000;background:#fff;border-top:1px solid #f0f0f0;padding:10rpx 0' bindtap='gobackdate'>施工日历</view>
+<view class='flex flex-center' style='position:fixed;bottom:0;left:0;width:100%;text-align:center;font-size:30rpx;color:#000;background:#fff;border-top:1px solid #f0f0f0;padding:10rpx 0' bindtap='gobackdate'>数智建造</view>

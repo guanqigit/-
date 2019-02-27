@@ -7,6 +7,7 @@ Page({
     parm: '',
     sgbw:'',
     pics:[],
+    false: false
   },
   //项目名称
   name: function (e) {

@@ -15,7 +15,7 @@
           <text style='font-size:26rpx;color:#888'>{{item.mechanical_Part}}</text>
         </view>
         <view class='flex flex-row flex-centeres flex-end-align'>
-          <text style='font-size:35rpx;color:red'>{{item.mechanical_unitPrice}}</text>
+          <text style='font-size:35rpx;color:red'>{{item.mechanical_unitPrice}}元</text>
         </view>
       </view>
       <view class="flex flex-space flex-end-align flex-box">
@@ -36,7 +36,7 @@
           <text style='font-size:26rpx;color:#888'>{{item.material_part}}</text>
         </view>
         <view class='flex flex-row flex-centeres flex-end-align'>
-          <text style='font-size:35rpx;color:red'>{{item.material_price}}</text>
+          <text style='font-size:35rpx;color:red'>{{item.material_price}}元</text>
         </view>
       </view>
       <view class="flex flex-space flex-end-align flex-box">
@@ -47,7 +47,7 @@
   <view class='flex flex-center' style="padding:20rpx 0" wx:if="{{list.length==0&&nav==1}}">暂无数据</view>
 </view>
 <view class='flex flex-space' style='position:fixed;bottom:0;left:0;width:100%;text-align:center;font-size:30rpx;color:#000;background:#fff;padding:20rpx 0'>
-  <view class='flex flex-center flex-box' bindtap='gobackdate'>施工日历</view>
+  <view class='flex flex-center flex-box' bindtap='gobackdate'>数智建造</view>
   <view class='flex flex-center flex-box' style='border-left:1px solid #f0f0f0;border-right:1px solid #f0f0f0' bindtap='addnew'>添加机械情况</view>
   <view class='flex flex-center flex-box' bindtap='addnew1'>添加机械需求</view>
 </view>

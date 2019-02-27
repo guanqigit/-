@@ -11,8 +11,8 @@
       <view class="flex flex-column title">
         <text class='text-hiddle'>{{item.arrival_name}}</text>
         <view class='flex flex-space'>
-          <text style='font-size:26rpx;color:#888'>{{item.arrival_count}}</text>
-          <text style='font-size:25rpx;color:#999'>{{item.arrival_unitPrice}}</text>
+          <text style='font-size:26rpx;color:#888'>{{item.arrival_count}}{{item.unit}}</text>
+          <text style='font-size:25rpx;color:#999'>{{item.arrival_unitPrice}}元</text>
         </view>
         <view class='flex flex-row flex-centers'>
           <text style='font-size:26rpx;color:#888'>{{item.arrival_Signer}}</text>
@@ -32,8 +32,8 @@
       <view class="flex flex-column title">
         <text class='text-hiddle'>{{item.name}}</text>
         <view class='flex flex-space'>
-          <text style='font-size:26rpx;color:#888'>{{item.count}}</text>
-          <text style='font-size:25rpx;color:#999'>{{item.price}}</text>
+          <text style='font-size:26rpx;color:#888'>{{item.count}}{{item.unitStr}}</text>
+          <text style='font-size:25rpx;color:#999'>{{item.price}}元</text>
         </view>
         <view class='flex flex-row flex-centers'>
           <text style='font-size:26rpx;color:#888'>{{item.partId}}</text>
@@ -47,7 +47,7 @@
   <view class='flex flex-center' style="padding:20rpx 0" wx:if="{{list.length==0&&nav==1}}">暂无数据</view>
 </view>
 <view class='flex flex-space' style='position:fixed;bottom:0;left:0;width:100%;text-align:center;font-size:30rpx;color:#000;background:#fff;padding:20rpx 0'>
-  <view class='flex flex-center flex-box' bindtap='gobackdate'>施工日历</view>
+  <view class='flex flex-center flex-box' bindtap='gobackdate'>数智建造</view>
   <view class='flex flex-center flex-box' style='border-left:1px solid #f0f0f0;border-right:1px solid #f0f0f0' bindtap='addnew'>添加材料情况</view>
   <view class='flex flex-center flex-box' bindtap='addnew1'>添加材料需求</view>
 </view>
