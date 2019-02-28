@@ -193,3 +193,7 @@ win30 {
 input{
   width: 100%;
 }
+.red{
+  color: red;
+  font-size: 30rpx;
+}

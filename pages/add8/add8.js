@@ -60,6 +60,13 @@ Page({
       isload: false
     })
   },
+  remove: function (e) {
+    var index = e.currentTarget.dataset.index;
+    this.data.pics.splice(index, 1)
+    this.setData({
+      pics: this.data.pics
+    })
+  },
   getonland: function (postdata) {
     var that = this;
     wx.request({
@@ -140,14 +147,7 @@ Page({
     var remark = that.data.post6;
     var part_id = that.data.part_id;
     var images = that.data.pics;
-    if (images.length == 0) {
-      wx.showToast({
-        title: ' 请上传图片',
-        icon: 'none',
-        mask: true
-      })
-      return;
-    } else if (name == '') {
+    if (name == '') {
       wx.showToast({
         title: ' 请填写材料名称',
         icon: 'none',

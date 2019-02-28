@@ -29,8 +29,8 @@ Page({
     })
   },
   gobackdate: function () {
-    wx.navigateBack({
-      delta: 1
+    wx.navigateTo({
+      url: '../usedmachinery/usedmachinery',
     })
   },
   onLoad: function (options) {

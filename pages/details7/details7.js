@@ -34,8 +34,8 @@ Page({
     })   
   },
   gobackdate: function () {
-    wx.navigateBack({
-      delta:2
+    wx.navigateTo({
+      url: '../usedmachinery/usedmachinery',
     })
   },
   onShareAppMessage: function () {

@@ -49,7 +49,6 @@ Page({
       cancelText: "取消",//默认是“取消”
       cancelColor: '#000',//取消文字的颜色
       confirmText: "确定",//默认是“确定”
-      confirmColor: 'skyblue',//确定文字的颜色
       success: function (res) {
         if (res.cancel) {
           //点击取消,默认隐藏弹框

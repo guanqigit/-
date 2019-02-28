@@ -16,22 +16,22 @@ Page({
   //项目名称
   name: function (e) {
     var that = this;
-    if (e.currentTarget.dataset.id == 3) {
+    if (e.currentTarget.dataset.id == 1) {
       this.setData({
         post1: e.detail.value
       })
     }
     if (e.currentTarget.dataset.id == 2) {
       this.setData({
-        post3: e.detail.value
-      })
-    }
-    if (e.currentTarget.dataset.id == 1) {
-      this.setData({
         post2: e.detail.value
       })
     }
-    if (e.currentTarget.dataset.id == 0) {
+    if (e.currentTarget.dataset.id == 3) {
+      this.setData({
+        post3: e.detail.value
+      })
+    }
+    if (e.currentTarget.dataset.id == 4) {
       this.setData({
         post4: e.detail.value
       })
@@ -89,15 +89,7 @@ Page({
     var images = that.data.pics;
     var part_name = that.data.post3;
     var site_remark = that.data.post4;
-    if (images.length == 0) {
-      wx.showToast({
-        title: ' 请上传图片',
-        icon: 'none',
-        mask:true
-      })
-      return;
-    }
-    if (part_name == '') {
+    if (laborSituation_count == '') {
       wx.showToast({
         title: ' 请填写班组人数',
         icon: 'none',

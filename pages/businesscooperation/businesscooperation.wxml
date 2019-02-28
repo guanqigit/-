@@ -15,12 +15,13 @@
   <view class="flex flex-wrap">
     <view class="flex" wx:for="{{pics}}" wx:key="" style="position:relative">
       <image src="{{item}}" class="imgs"></image>
-      <image src="../../image/detail-rea1.png" data-index="{{index}}" bindtap="remove" style="border-radius: 50%;position:absolute;top:10rpx;right:10rpx;width:20rpx;height:20rpx;padding:20rpx;background:rgba(255,255,255,.8)"></image>
+      <image src="../../image/detail-rea1.png" data-index="{{index}}" bindtap="remove" style="border-radius: 50%;position:absolute;top:10rpx;right:20rpx;width:20rpx;height:20rpx;padding:20rpx;background:rgba(255,255,255,.8)"></image>
     </view>
   </view>
   <view class="flex" style="padding:10rpx 0;background:#fff;margin:10rpx 0 20rpx 0;"></view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
-    <view class="flex">
+    <view class="flex flex-row flex-center">
+      <text class="red">*</text>
       <text class="title">工程名称</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
@@ -36,7 +37,8 @@
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
-    <view class="flex">
+    <view class="flex flex-row flex-center">
+      <text class="red">*</text>
       <text class="title">建设单位名称</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
@@ -60,7 +62,8 @@
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
-    <view class="flex">
+    <view class="flex flex-row flex-center">
+      <text class="red">*</text>
       <text class="title">施工单位名称</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
@@ -192,15 +195,16 @@
       <text class="title">建筑面积/m²</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" data-id="18" type='digit'/>
+      <input bindinput="name" data-id="18" type='digit' />
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
-    <view class="flex">
+    <view class="flex flex-row flex-center">
+      <text class="red">*</text>
       <text class="title">工程造价/万元</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" data-id="19" type='digit'/>
+      <input bindinput="name" data-id="19" type='digit' />
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
@@ -245,7 +249,7 @@
   </view>
   <view class="flex  flex-centerss input-box bottom">
     <view class="flex bottoomright flex-center" bindtap="submit">
-      发布
+      新增
     </view>
   </view>
 </view>

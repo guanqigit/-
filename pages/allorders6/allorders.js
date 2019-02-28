@@ -1,4 +1,4 @@
-var util = require('../../utils/util.js');  
+var util = require('../../utils/util.js');
 var app = getApp();
 var pages = 0;
 Page({
@@ -7,25 +7,25 @@ Page({
     pageindex: 0,
     pagesize: 10,
     searchName: '',
-    nav:0
+    nav: 0
   },
-  nav:function(e){
-    var that=this;
+  nav: function (e) {
+    var that = this;
     that.setData({
-      nav:e.currentTarget.dataset.id,
-      pageindex:0
-    },function(){
-      if(e.currentTarget.dataset.id==0){
+      nav: e.currentTarget.dataset.id,
+      pageindex: 0
+    }, function () {
+      if (e.currentTarget.dataset.id == 0) {
         that.getlsit(that.data.id)
-      }else{
+      } else {
         that.getlsits(that.data.id)
       }
     })
-    
+
   },
-  gobackdate:function(){
-    wx.navigateBack({
-      delta: 1
+  gobackdate: function () {
+    wx.navigateTo({
+      url: '../usedmachinery/usedmachinery',
     })
   },
   searchs: function () {
@@ -50,12 +50,12 @@ Page({
     var that = this;
     that.setData({
       id: options.id
-    })    
+    })
     that.getlsit(options.id)
     that.getlsits(options.id)
   },
-  getlsit:function(id){
-    var that=this;
+  getlsit: function (id) {
+    var that = this;
     wx.request({
       url: app.globalData.apiUrl.SgxcGetList,
       data: {
@@ -139,7 +139,7 @@ Page({
   goInfo(e) {
     var that = this;
     wx.navigateTo({
-      url: '../details6/details6?id=' + e.currentTarget.dataset.id ,
+      url: '../details6/details6?id=' + e.currentTarget.dataset.id,
     })
   },
   goInfos(e) {
@@ -149,9 +149,9 @@ Page({
     })
   },
   //
-  addnew:function(){
+  addnew: function () {
     wx.navigateTo({
-      url: '../add6/add6?id='+this.data.id,
+      url: '../add6/add6?id=' + this.data.id,
     })
   },
   addnew1: function () {

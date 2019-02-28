@@ -167,14 +167,6 @@ Page({
     var mechanical_Part = that.data.post5;
     var mechanical_remarks = that.data.post6;
     var imgs = that.data.pics;
-    if (imgs.length == 0) {
-      wx.showToast({
-        title: ' 请上传图片',
-        icon: 'none',
-        mask: true
-      })
-      return;
-    }
     if (mechanical_model == '') {
       wx.showToast({
         title: ' 请填写规格型号',

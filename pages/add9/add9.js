@@ -108,14 +108,7 @@ Page({
     var material_part = that.data.post5;
     var material_remark = that.data.post6;
     var images = that.data.pics;
-    if (images.length == 0) {
-      wx.showToast({
-        title: ' 请上传图片',
-        icon: 'none',
-        mask: true
-      })
-      return;
-    } else if (material_model == '') {
+    if (material_model == '') {
       wx.showToast({
         title: ' 请填写规格型号',
         icon: 'none',

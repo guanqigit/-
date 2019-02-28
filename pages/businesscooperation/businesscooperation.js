@@ -27,6 +27,8 @@ Page({
     jzmj: '',
     gczj: '',
     jianjie: '',
+    site_engineeringType:' ',
+    site_structureType:' ',
   },
   remove: function (e) {
     var index = e.currentTarget.dataset.index;
@@ -242,25 +244,32 @@ Page({
     var site_startTime = that.data.date;//开工日期
     var site_completion = that.data.dates;//计划竣工日期
     var imgs = that.data.pics;
-    if (imgs == '') {
-      wx.showToast({
-        title: ' 请上传图片',
-        icon: 'none',
-        mask: true
-      })
-      return;
-    }
-    if (imgs.length > 10) {
-      wx.showToast({
-        title: '请最多上传10张图片',
-        icon: 'none',
-        mask: true
-      })
-      return;
-    }
     if (site_name == '') {
       wx.showToast({
         title: ' 请填写工程名称',
+        icon: 'none',
+        mask: true
+      })
+      return;
+    } if (site_companyName == '') {
+      wx.showToast({
+        title: ' 请填写建设单位名称',
+        icon: 'none',
+        mask: true
+      })
+      return;
+    }
+    if (site_constructionName == '') {
+      wx.showToast({
+        title: ' 请填写施工单位名称',
+        icon: 'none',
+        mask: true
+      })
+      return;
+    } 
+    if (site_projectCosts == '') {
+      wx.showToast({
+        title: ' 请填写工程造价',
         icon: 'none',
         mask: true
       })

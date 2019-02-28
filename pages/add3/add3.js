@@ -33,6 +33,13 @@ Page({
       })
     }
   },
+  remove: function (e) {
+    var index = e.currentTarget.dataset.index;
+    this.data.pics.splice(index, 1)
+    this.setData({
+      pics: this.data.pics
+    })
+  },
   uploadimg: function () {//这里是选取图片的方法
     var that = this;
     wx.chooseImage({
@@ -84,38 +91,9 @@ Page({
     var work_tomorrow = that.data.jxdj;
     var work_coordination = that.data.parm;
     var images = that.data.pics;
-    if (images.length == 0) {
-      wx.showToast({
-        title: ' 请上传图片',
-        icon: 'none',
-        mask: true
-      })
-      return;
-    } else if (work_workload == '') {
-      wx.showToast({
-        title: ' 请填写施工部位',
-        icon: 'none',
-        mask: true
-      })
-      return;
-    } 
-    else if (work_today == '') {
+    if (work_today == '') {
       wx.showToast({
         title: ' 请填写今天施工进度完成情况',
-        icon: 'none',
-        mask: true
-      })
-      return;
-    } else if (work_tomorrow == '') {
-      wx.showToast({
-        title: ' 请填写明天的计划安排',
-        icon: 'none',
-        mask: true
-      })
-      return;
-    } else if (work_coordination == '') {
-      wx.showToast({
-        title: ' 请填写协调解决的问题',
         icon: 'none',
         mask: true
       })

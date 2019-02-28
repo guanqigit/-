@@ -101,15 +101,9 @@ Page({
     var sitePart = that.data.sybw;
     var remark = that.data.bz;
     var images=that.data.pics;
-    if (images.length == 0) {
+    if (safety_modify == '') {
       wx.showToast({
-        title: ' 请先上传图片',
-        image: '../../image/chacha.png'
-      })
-      return;
-    }else if (safety_modify == '') {
-      wx.showToast({
-        title: ' 请上传图片',
+        title: '请填写需要整改的安全问题',
         icon: 'none',
         mask: true
       })
