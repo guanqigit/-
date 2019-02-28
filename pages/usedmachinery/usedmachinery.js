@@ -25,7 +25,7 @@ Page({
           that.setData({
             btncode: true
           })
-        }else{
+        } else {
           wx.hideShareMenu()
         }
         that.setData({
@@ -41,8 +41,8 @@ Page({
     })
 
   },
-  goback:function(){
-    var that=this;
+  goback: function () {
+    var that = this;
     wx.showModal({
       title: '提示',
       content: '确定要退出该项目吗？',
@@ -66,12 +66,14 @@ Page({
               if (res.data.code == 0) {
                 wx.showToast({
                   title: '已成功退出该项目',
-                  icon:'none',
-                  mask:true,
-                  success:function(){
-                    wx.navigateTo({
-                      url: '../index/index',
-                    })
+                  icon: 'none',
+                  mask: true,
+                  success: function () {
+                    setTimeout(function () {
+                      wx.navigateTo({
+                        url: '../index/index',
+                      })
+                    }, 1000)
                   }
                 })
               }
@@ -82,7 +84,7 @@ Page({
 
             }
           })
-          
+
         }
       },
       fail: function (res) { },//接口调用失败的回调函数
@@ -143,7 +145,7 @@ Page({
     })
   },
   onShareAppMessage: function () {
-    var that=this;
+    var that = this;
     return {
       title: '好项目大家一起做',
       path: '/pages/index/index?id=' + that.data.id + '&openid=' + app.globalData.openid,
