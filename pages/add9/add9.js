@@ -200,7 +200,7 @@ Page({
       date: time
     })
     wx.request({
-      url: app.globalData.apiUrl.sgload,
+      url: app.globalData.apiUrl.GetPart,
       data: {},
       method: 'POST',
       header: { "Content-Type": "application/x-www-form-urlencoded" },

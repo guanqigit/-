@@ -227,7 +227,7 @@ Page({
       date: (timer.formatTime(new Date()).split(" "))[0]
     })
     wx.request({
-      url: app.globalData.apiUrl.GetEquipmentType,
+      url: app.globalData.apiUrl.GetPart,
       data: {},
       method: 'POST',
       header: { "Content-Type": "application/x-www-form-urlencoded" },
