@@ -20,7 +20,7 @@ Page({
   },
   gobackdate: function () {
     wx.navigateTo({
-      url: '../usedmachinery/usedmachinery',
+      url: '../usedmachinery/usedmachinery?id='+this.data.id+'&name='+this.data.name,
     })
   },
   back: function () {
@@ -36,7 +36,8 @@ Page({
     })
     var that = this;
     that.setData({
-      id: options.id
+      id: options.id,
+      name:options.name
     })
     that.getlist(options.id)
   },

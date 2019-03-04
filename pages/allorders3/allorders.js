@@ -30,7 +30,7 @@ Page({
   },
   gobackdate: function () {
     wx.navigateTo({
-      url: '../usedmachinery/usedmachinery',
+      url: '../usedmachinery/usedmachinery?id=' + this.data.id + '&&name=' + this.data.name,
     })
   },
   onLoad: function (options) {
@@ -63,7 +63,8 @@ Page({
         }
         that.setData({
           list: list,
-          id:options.id
+          id:options.id,
+          name: options.name,
         })
       },
       fail: function () {

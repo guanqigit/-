@@ -93,43 +93,43 @@ Page({
   nav1: function () {
     var that = this;
     wx.navigateTo({
-      url: '../allorders/allorders?id=' + that.data.id + '&&type=1',
+      url: '../allorders/allorders?id=' + that.data.id + '&&name=' + that.data.projuctname + '&&type=1',
     })
   },
   nav2: function () {
     var that = this;
     wx.navigateTo({
-      url: '../allorders1/allorders?id=' + that.data.id + '&&type=2',
+      url: '../allorders1/allorders?id=' + that.data.id + '&&name=' + that.data.projuctname + '&&type=2',
     })
   },
   nav3: function () {
     var that = this;
     wx.navigateTo({
-      url: '../allorders2/allorders?id=' + that.data.id + '&&type=3',
+      url: '../allorders2/allorders?id=' + that.data.id + '&&name=' + that.data.projuctname + '&&type=3',
     })
   },
   nav4: function () {
     var that = this;
     wx.navigateTo({
-      url: '../allorders3/allorders?id=' + that.data.id + '&&type=4',
+      url: '../allorders3/allorders?id=' + that.data.id + '&&name=' + that.data.projuctname +  '&&type=4',
     })
   },
   nav5: function () {
     var that = this;
     wx.navigateTo({
-      url: '../allorders4/allorders?id=' + that.data.id + '&&type=5',
+      url: '../allorders4/allorders?id=' + that.data.id + '&&name=' + that.data.projuctname + '&&type=5',
     })
   },
   nav6: function () {
     var that = this;
     wx.navigateTo({
-      url: '../allorders5/allorders?id=' + that.data.id + '&&type=6',
+      url: '../allorders5/allorders?id=' + that.data.id + '&&name=' + that.data.projuctname + '&&type=6',
     })
   },
   nav7: function () {
     var that = this;
     wx.navigateTo({
-      url: '../allorders6/allorders?id=' + that.data.id + '&&type=7',
+      url: '../allorders6/allorders?id=' + that.data.id + '&&name=' + that.data.projuctname + '&&type=7',
     })
   },
   nav8: function () {

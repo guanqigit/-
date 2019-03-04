@@ -30,7 +30,7 @@ Page({
   },
   gobackdate: function () {
     wx.navigateTo({
-      url: '../usedmachinery/usedmachinery',
+      url: '../usedmachinery/usedmachinery?id=' + this.data.id + '&&name=' + this.data.name,
     })
   },
   onLoad: function (options) {
@@ -44,7 +44,7 @@ Page({
       url: app.globalData.apiUrl.add2list,
       data: {
         openId: app.globalData.openid,
-        site_id: options.id
+        site_id: options.id,
       },
       method: 'POST',
       header: {
@@ -54,7 +54,8 @@ Page({
         console.log(res)
         that.setData({
           list: res.data.list,
-          id: options.id
+          id: options.id,
+          name: options.name,
         })
       },
       fail: function () {

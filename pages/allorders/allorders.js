@@ -24,13 +24,14 @@ Page({
   },
   gobackdate: function () {
     wx.navigateTo({
-      url: '../usedmachinery/usedmachinery',
+      url: '../usedmachinery/usedmachinery?id='+this.data.id+'&name='+this.data.name,
     })
   },
   onLoad: function (options) {
     var that = this;
     that.setData({
-      id: options.id
+      id: options.id,
+      name:options.name
     },function(){
       that.getlist(options.id);
     })

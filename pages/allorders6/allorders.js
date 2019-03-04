@@ -25,7 +25,7 @@ Page({
   },
   gobackdate: function () {
     wx.navigateTo({
-      url: '../usedmachinery/usedmachinery',
+      url: '../usedmachinery/usedmachinery?id='+this.data.id+'&&name='+this.data.name,
     })
   },
   searchs: function () {
@@ -49,7 +49,8 @@ Page({
     })
     var that = this;
     that.setData({
-      id: options.id
+      id: options.id,
+      name:options.name
     })
     that.getlsit(options.id)
     that.getlsits(options.id)
