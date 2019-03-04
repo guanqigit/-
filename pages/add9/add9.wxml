@@ -19,7 +19,8 @@
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
-    <view class="flex">
+    <view class="flex flex-row flex-center">
+      <text class="red">*</text>
       <text class="title">机械名称</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
@@ -39,7 +40,8 @@
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
-    <view class="flex">
+    <view class="flex flex-row flex-center">
+      <text class="red">*</text>
       <text class="title">数量</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
@@ -47,7 +49,8 @@
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
-    <view class="flex">
+    <view class="flex flex-row flex-center">
+      <text class="red">*</text>
       <text class="title">单价/元</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">

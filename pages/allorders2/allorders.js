@@ -74,7 +74,7 @@ Page({
           }
           that.setData({
             list: list,
-            unmber: res.data.totalCount,
+            // unmber: res.data.totalCount,
           })
         },
         fail: function () {
@@ -120,7 +120,7 @@ Page({
           }
           that.setData({
             list: list,
-            unmber: res.data.totalCount,
+            // unmber: res.data.totalCount,
           })
         },
         fail: function () {

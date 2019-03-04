@@ -1,4 +1,4 @@
-<image src='{{infodata}}' class="slide-image"></image>
+<image src='{{infodata}}' class="slide-image" mode="widthFix"></image>
 <view class="flex flex-space line-box">
   <view class="flex flex-box list-boxs">
     <text>{{remark}}</text>

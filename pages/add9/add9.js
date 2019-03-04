@@ -108,9 +108,9 @@ Page({
     var material_part = that.data.post5;
     var material_remark = that.data.post6;
     var images = that.data.pics;
-    if (material_model == '') {
+    if (material_name == '') {
       wx.showToast({
-        title: ' 请填写规格型号',
+        title: ' 请填机械名称',
         icon: 'none',
         mask: true
       })
@@ -119,6 +119,14 @@ Page({
     else if (material_count == '') {
       wx.showToast({
         title: ' 请填写数量',
+        icon: 'none',
+        mask: true
+      })
+      return;
+    } 
+    else if (material_price == '') {
+      wx.showToast({
+        title: ' 请填写单价',
         icon: 'none',
         mask: true
       })
@@ -168,26 +176,32 @@ Page({
     }
   },
   bindMultiPickerChange: function (e) {
+    console.log(156345)
     this.setData({
       "multiIndex[0]": e.detail.value[0],
       "multiIndex[1]": e.detail.value[1],
-      part_id: this.data.list[e.detail.value[0]].item[e.detail.value[1]].part_id
+      part_id: this.data.list[e.detail.value[0]].list[e.detail.value[1]].Id
     })
   },
   bindMultiPickerColumnChange: function (e) {
     var that = this;
+    var data = that.data.list;
     switch (e.detail.column) {
       case 0:
-        var list = []
+        var arraydata = [];
         for (var i = 0; i < that.data.objectMultiArray.length; i++) {
-          if (that.data.objectMultiArray[i].part_id == that.data.list[e.detail.value].part_id) {
-            list.push(that.data.objectMultiArray[i].part_name)
+          if (that.data.objectMultiArray[i].part_id == data[e.detail.value].Id) {
+            arraydata.push(that.data.objectMultiArray[i].part_name)
           }
         }
         that.setData({
-          "multiArray[1]": list,
-          "multiIndex[0]": e.detail.value,
-          "multiIndex[1]": 0
+          "multiArray[1]": [],
+        }, function () {
+          that.setData({
+            "multiArray[1]": arraydata,
+            "multiIndex[0]": e.detail.value,
+            "multiIndex[1]": 0
+          })
         })
 
     }
@@ -200,29 +214,29 @@ Page({
       date: time
     })
     wx.request({
-      url: app.globalData.apiUrl.GetPart,
+      url: app.globalData.apiUrl.GetEquipmentType,
       data: {},
       method: 'POST',
       header: { "Content-Type": "application/x-www-form-urlencoded" },
       success: function (res) {
-        for (var i = 0; i < res.data.list.length; i++) {
-          that.data.multiArray[0].push([res.data.list[i].part_name])
-          for (var s = 0; s < res.data.list[i].item.length; s++) {
+        for (var i = 0; i < res.data.data.length; i++) {
+          that.data.multiArray[0].push([res.data.data[i].name])
+          for (var s = 0; s < res.data.data[i].list.length; s++) {
             that.data.objectMultiArray.push({
-              'id': res.data.list[i].item[s].part_id,
-              'part_name': res.data.list[i].item[s].part_name,
-              'part_id': res.data.list[i].part_id
+              'id': res.data.data[i].list[s].Id,
+              'part_name': res.data.data[i].list[s].name,
+              'part_id': res.data.data[i].Id
             })
           }
         }
-        for (var i = 0; i < res.data.list[0].item.length; i++) {
-          that.data.multiArray[1].push([res.data.list[0].item[i].part_name])
+        for (var i = 0; i < res.data.data[0].list.length; i++) {
+          that.data.multiArray[1].push([res.data.data[0].list[i].name])
         }
         that.setData({
           multiArray: that.data.multiArray,
           objectMultiArray: that.data.objectMultiArray,
-          list: res.data.list,
-          part_id: res.data.list[0].item[0].part_id
+          list: res.data.data,
+          part_id: res.data.data[0].list[0].Id
         })
       }, fail: function () {
 

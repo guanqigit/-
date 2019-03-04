@@ -167,9 +167,17 @@ Page({
     var mechanical_Part = that.data.post5;
     var mechanical_remarks = that.data.post6;
     var imgs = that.data.pics;
-    if (mechanical_model == '') {
+    if (mechanical_name == '') {
       wx.showToast({
-        title: ' 请填写规格型号',
+        title: ' 请填机械名称',
+        icon: 'none',
+        mask: true
+      })
+      return;
+    } 
+    if (mechanical_unitPrice == '') {
+      wx.showToast({
+        title: ' 请填机械单价',
         icon: 'none',
         mask: true
       })
@@ -227,7 +235,7 @@ Page({
       date: (timer.formatTime(new Date()).split(" "))[0]
     })
     wx.request({
-      url: app.globalData.apiUrl.GetPart,
+      url: app.globalData.apiUrl.GetEquipmentType,
       data: {},
       method: 'POST',
       header: { "Content-Type": "application/x-www-form-urlencoded" },
