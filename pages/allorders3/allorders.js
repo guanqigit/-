@@ -103,7 +103,7 @@ Page({
   goInfo(e) {
     var that = this;
     wx.navigateTo({
-      url: '../details3/details3?id=' + e.currentTarget.dataset.id ,
+      url: '../details3/details3?id=' + JSON.stringify(e.currentTarget.dataset.id) ,
     })
   },
   //

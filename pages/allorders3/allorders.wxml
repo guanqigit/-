@@ -1,14 +1,9 @@
 <view class="container">
-  <view bindtap="goInfo" class="flex flex-column list" wx:for-index="inde" data-id="{{item.constructionSite_id}}" wx:for="{{list}}" wx:key="">
-      <image src="{{item.constructionSite_image}}" class="listimg"></image>
-    <!--<view class="flex flex-column flex-box" style='overflow:hidden'>
-      <view class="flex flex-column title">
-        <text class='text-hiddle'>{{item.constructionSite_remarks}}</text>
-      </view>
-      <view class="flex flex-space flex-end-align flex-box">
-        <text class="adress">{{item.timeStr}}</text> 
-      </view>
-    </view>-->
+  <view bindtap="goInfo" class="flex flex-row flex-centers list" wx:for-index="inde" data-id="{{item}}" wx:for="{{list}}" wx:key="">
+    <image src="{{item.image_path}}" class="listimg"></image>
+    <view class="flex flex-space flex-end-align flex-box">
+      <text class="adress">{{item.image_createTime}}</text>
+    </view>
   </view>
   <view class='flex flex-center' style="padding:20rpx 0" wx:if="{{list.length==0}}">暂无数据</view>
 </view>

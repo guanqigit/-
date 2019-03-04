@@ -2,6 +2,7 @@ page {
   background-color: #edf0f3;
   /*font-family: '微软雅黑';*/
   font-size: 26rpx;
+  height: 100%;
 }
 
 .lunb {
@@ -10,32 +11,35 @@ page {
 }
 
 .slide-image {
- width: 100%;
-  height: 500rpx;
-  background-size:cover; 
-  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
 }
-.line-item{
+
+.line-item {
   width: 45%;
   padding: 20rpx 0;
   border: 1px solid #f2f2f2;
   border-radius: 5px;
   margin-bottom: 15rpx;
 }
+
 .line-box {
-  padding: 30rpx 20rpx 100rpx;
-  background: #fff;
+  background: rgba(000, 000, 000, 0.5);
   border-bottom: 1px solid #f3f3f3;
   overflow: hidden;
+  position: fixed;
+  bottom: 60rpx;
+  left: 0;
+  font-size: 30rpx;
+  color: #fff;
+  width: 100%;
 }
-.line-boxs {
+
+.list-boxs {
   padding: 30rpx 20rpx;
-  background: #fff;
   border-bottom: 1px solid #f3f3f3;
 }
-.list-box view{
-  line-height: 60rpx;
-}
+
 .title {
   font-size: 32rpx;
   color: #333;
@@ -59,36 +63,43 @@ page {
   margin-bottom: 20rpx;
   text-decoration: line-through;
 }
-.lefttitle{
+
+.lefttitle {
   color: #999;
   font-size: 28rpx;
   margin-bottom: 10rpx;
 }
-.righttitle{
+
+.righttitle {
   color: #333;
   font-size: 28rpx;
-   margin-bottom: 10rpx;
+  margin-bottom: 10rpx;
 }
-.tab{
+
+.tab {
   position: fixed;
   bottom: 0;
   height: 100rpx;
   width: 100%;
 }
-.tableft{
+
+.tableft {
   background: #febb06;
   color: #fff;
 }
-.tabright{
+
+.tabright {
   background: #fc2f07;
   color: #fff;
 }
-.commentimg{
+
+.commentimg {
   width: 30rpx;
   height: 30rpx;
   margin-bottom: 5rpx;
 }
-.telimg{
+
+.telimg {
   width: 30rpx;
   height: 30rpx;
   margin-bottom: 5rpx;

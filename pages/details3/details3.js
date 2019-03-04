@@ -7,31 +7,11 @@ Page({
   },
   onLoad: function (options) {
     var that = this;
-    wx.request({
-      url: app.globalData.apiUrl.photoGetModel,
-      data: {
-        openId: app.globalData.openid,
-        constructionSite_id: options.id,
-      },
-      method: 'POST',
-      header: { "Content-Type": "application/x-www-form-urlencoded" },
-      success: function (res) {    
-        that.setData({
-          infodata: res.data.list,
-          merchant_img: res.data.images,
-          //foactid: res.data.model.factory_id
-        })
-      }, fail: function () {
-        wx.showToast({
-          title: '加载失败',
-          image: '../../image/chacha.png',
-          duration: 2000
-        })
-      },
-      complete: function () {
-        wx.hideToast();
-      }
-    })   
+    var data=JSON.parse(options.id)
+    that.setData({
+      infodata: data.image_path,
+      remark: data.remark,
+    })
   },
   gobackdate: function () {
     wx.navigateTo({
