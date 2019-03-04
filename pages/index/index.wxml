@@ -17,7 +17,7 @@
       </view>
     </view>
   </view>
-  <view class='flex flex-center' style="padding:20rpx 0" wx:if="{{list.length==0}}">暂无数据</view>
+  <view class='flex flex-center' style="padding:20rpx 0" wx:if="{{list.length==0}}" bindtap='creatpuct'>创建新项目</view>
   <view class='flex flex-center' wx:if="{{bindgetusercode}}">
     <button open-type='getUserInfo' class='model-btn' lang="zh_CN" bindgetuserinfo="onGotUserInfo">前往授权</button>
   </view>

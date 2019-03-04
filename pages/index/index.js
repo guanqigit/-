@@ -16,6 +16,11 @@ Page({
       url: '../member-message/member-message',
     })
   },
+  creatpuct:function(){
+    wx.navigateTo({
+      url: '../businesscooperation/businesscooperation',
+    })
+  },
   //搜索
   search: function (e) {
     var that = this;
