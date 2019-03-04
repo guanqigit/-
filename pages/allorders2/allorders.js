@@ -19,7 +19,7 @@ Page({
     
   },
   gobackdate: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../usedmachinery/usedmachinery?id='+this.data.id+'&name='+this.data.name,
     })
   },
