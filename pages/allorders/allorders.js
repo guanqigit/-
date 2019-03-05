@@ -160,12 +160,12 @@ Page({
   //
   addnew: function () {
     wx.navigateTo({
-      url: '../add1/add1?id=' + this.data.id,
+      url: '../add1/add1?id=' + this.data.id + '&&name=' + this.data.name,
     })
   },
   addnew1: function () {
     wx.navigateTo({
-      url: '../add9/add9?id=' + this.data.id,
+      url: '../add9/add9?id=' + this.data.id + '&&name=' + this.data.name,
     })
   },
 })

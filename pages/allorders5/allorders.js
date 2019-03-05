@@ -101,7 +101,7 @@ Page({
   //
   addnew: function () {
     wx.navigateTo({
-      url: '../add2/add2?id='+this.data.id,
+      url: '../add2/add2?id=' + this.data.id + '&&name=' + this.data.name,
     })
   },
   //添加

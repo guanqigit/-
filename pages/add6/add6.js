@@ -130,7 +130,7 @@ Page({
           })
           setTimeout(function () {
             wx.navigateTo({
-              url: '../allorders6/allorders?id=' + that.data.id + '&type=1',
+              url: '../allorders6/allorders?id=' + that.data.id + '&type=1'+'&name='+that.data.name,
             })
           }, 1000)
         }, fail: function () {
@@ -174,7 +174,8 @@ Page({
   onLoad: function (options) {
     var that = this;
     that.setData({
-      id: options.id
+      id: options.id,
+      name:options.name
     })
     wx.request({
       url: app.globalData.apiUrl.sgload,

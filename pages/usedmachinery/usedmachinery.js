@@ -28,6 +28,7 @@ Page({
         } else {
           wx.hideShareMenu()
         }
+        console.log(options.name)
         that.setData({
           id: options.id,
           projuctname: options.name,

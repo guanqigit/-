@@ -116,7 +116,7 @@ Page({
   //
   addnew:function(){
     wx.navigateTo({
-      url: '../add3/add3?id=' + this.data.id,
+      url: '../add3/add3?id=' + this.data.id + '&&name=' + this.data.name,
     })
   },
   //添加

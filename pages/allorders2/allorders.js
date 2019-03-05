@@ -175,12 +175,12 @@ Page({
   //
   addnew: function () {
     wx.navigateTo({
-      url: '../add4/add4?id=' + this.data.id,
+      url: '../add4/add4?id=' + this.data.id + '&&name=' + this.data.name,
     })
   },
   addnew1: function () {
     wx.navigateTo({
-      url: '../add8/add8?id=' + this.data.id,
+      url: '../add8/add8?id=' + this.data.id + '&&name=' + this.data.name,
     })
   },
 })

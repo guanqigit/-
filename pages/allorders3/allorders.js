@@ -110,7 +110,7 @@ Page({
   //
   addnew:function(){
     wx.navigateTo({
-      url: '../add5/add5?id='+this.data.id,
+      url: '../add5/add5?id=' + this.data.id + '&&name=' + this.data.name,
     })
   },
   //添加

@@ -48,6 +48,7 @@ Page({
       duration: 2000
     })
     var that = this;
+    console.log(options.name)
     that.setData({
       id: options.id,
       name:options.name
@@ -152,12 +153,12 @@ Page({
   //
   addnew: function () {
     wx.navigateTo({
-      url: '../add6/add6?id=' + this.data.id,
+      url: '../add6/add6?id=' + this.data.id+'&&name='+this.data.name,
     })
   },
   addnew1: function () {
     wx.navigateTo({
-      url: '../add10/add10?id=' + this.data.id,
+      url: '../add10/add10?id=' + this.data.id + '&&name=' + this.data.name,
     })
   },
 })
