@@ -7,7 +7,8 @@ Page({
     pageindex: 0,
     pagesize: 10,
     searchName: '',
-    nav: 0
+    nav: 0,
+    code:0
   },
   nav: function (e) {
     var that = this;
@@ -24,9 +25,10 @@ Page({
 
   },
   gobackdate: function () {
-    wx.redirectTo({
-      url: '../usedmachinery/usedmachinery?id='+this.data.id+'&&name='+this.data.name,
-    })
+    // wx.redirectTo({
+    //   url: '../usedmachinery/usedmachinery?id='+this.data.id+'&&name='+this.data.name,
+    // })
+    wx.navigateBack()
   },
   searchs: function () {
     var that = this;
@@ -48,10 +50,10 @@ Page({
       duration: 2000
     })
     var that = this;
-    console.log(options.name)
     that.setData({
       id: options.id,
-      name:options.name
+      name:options.name,
+      options:options
     })
     that.getlsit(options.id)
     that.getlsits(options.id)
@@ -86,6 +88,16 @@ Page({
         wx.hideToast();
       }
     })
+  },
+  onShow:function(){
+    var that=this;
+    if (that.data.code>0){
+      that.onLoad(that.data.options);
+    }else{
+      that.setData({
+        code:that.data.code+1
+      })
+    }
   },
   getlsits: function (id) {
     var that = this;

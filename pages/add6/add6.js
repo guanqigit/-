@@ -129,9 +129,7 @@ Page({
             icon: "success"
           })
           setTimeout(function () {
-            wx.navigateTo({
-              url: '../allorders6/allorders?id=' + that.data.id + '&type=1'+'&name='+that.data.name,
-            })
+            wx.navigateBack()
           }, 1000)
         }, fail: function () {
           wx.showToast({

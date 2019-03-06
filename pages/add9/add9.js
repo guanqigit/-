@@ -159,9 +159,7 @@ Page({
             icon: "success"
           })
           setTimeout(function () {
-            wx.navigateTo({
-              url: '../allorders/allorders?id=' + that.data.id + '&type=1',
-            })
+            wwx.navigateBack()
           }, 1000)
         }, fail: function () {
           wx.showToast({

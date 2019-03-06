@@ -7,6 +7,7 @@ Page({
     pageindex: 0,
     pagesize: 10,
     searchName: '',
+    code:0
   },
   //搜索
   search: function (e) {
@@ -29,9 +30,20 @@ Page({
     })
   },
   gobackdate: function () {
-    wx.redirectTo({
-      url: '../usedmachinery/usedmachinery?id=' + this.data.id + '&&name=' + this.data.name,
-    })
+    // wx.redirectTo({
+    //   url: '../usedmachinery/usedmachinery?id=' + this.data.id + '&&name=' + this.data.name,
+    // })
+    wx.navigateBack()
+  },
+  onShow: function () {
+    var that = this;
+    if (that.data.code > 0) {
+      that.onLoad(that.data.options);
+    } else {
+      that.setData({
+        code: that.data.code + 1
+      })
+    }
   },
   onLoad: function (options) {
     wx.showToast({
@@ -70,7 +82,8 @@ Page({
           list: list,
           unmber: res.data.totalCount,
           id:options.id,
-          name:options.name
+          name:options.name,
+          options:options
         })
       },
       fail: function () {
