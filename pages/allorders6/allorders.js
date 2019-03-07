@@ -153,13 +153,13 @@ Page({
   goInfo(e) {
     var that = this;
     wx.navigateTo({
-      url: '../details6/details6?id=' + e.currentTarget.dataset.id,
+      url: '../details6/details6?id=' + e.currentTarget.dataset.id+'&name='+that.data.name+'&ids='+that.data.id,
     })
   },
   goInfos(e) {
     var that = this;
     wx.navigateTo({
-      url: '../details7/details7?id=' + e.currentTarget.dataset.id,
+      url: '../details7/details7?id=' + e.currentTarget.dataset.id + '&name=' + that.data.name+'&ids='+that.data.id
     })
   },
   //

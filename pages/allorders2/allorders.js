@@ -176,13 +176,13 @@ Page({
   goInfo(e) {
     var that = this;
     wx.navigateTo({
-      url: '../details2/details2?id=' + e.currentTarget.dataset.id,
+      url: '../details2/details2?id=' + e.currentTarget.dataset.id + '&name=' + that.data.name+'&ids='+that.data.id,
     })
   },
   goInfos(e) {
     var that = this;
     wx.navigateTo({
-      url: '../details8/details8?id=' + e.currentTarget.dataset.id,
+      url: '../details8/details8?id=' + e.currentTarget.dataset.id + '&name=' + that.data.name+'&ids='+that.data.id,
     })
   },
   //

@@ -81,7 +81,6 @@ Page({
           }
           that.setData({
             list: list,
-            unmber: res.data.totalCount
           })
         },
         fail: function () {
@@ -120,7 +119,6 @@ Page({
           }
           that.setData({
             list: list,
-            unmber: res.data.totalCount
           })
         },
         fail: function () {
@@ -161,13 +159,13 @@ Page({
   goInfo(e) {
     var that = this;
     wx.navigateTo({
-      url: '../details1/details1?id=' + e.currentTarget.dataset.id,
+      url: '../details1/details1?id=' + e.currentTarget.dataset.id + '&name=' + that.data.name+'&ids='+that.data.id,
     })
   },
   goInfos(e) {
     var that = this;
     wx.navigateTo({
-      url: '../details9/details9?id=' + e.currentTarget.dataset.id,
+      url: '../details9/details9?id=' + e.currentTarget.dataset.id + '&name=' + that.data.name+'&ids='+that.data.id,
     })
   },
   //

@@ -108,7 +108,7 @@ Page({
   goInfo(e) {
     var that = this;
     wx.navigateTo({
-      url: '../details5/details5?id=' + e.currentTarget.dataset.id,
+      url: '../details5/details5?id=' + e.currentTarget.dataset.id+'&ids='+that.data.id+'&name='+that.data.name,
     })
   },
   //

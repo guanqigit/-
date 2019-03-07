@@ -11,12 +11,15 @@ Page({
     that.setData({
       infodata: data.image_path,
       remark: data.remark,
+      id:options.ids,
+      name:options.name
     })
   },
   gobackdate: function () {
-    wx.navigateTo({
-      url: '../usedmachinery/usedmachinery',
-    })
+    // wx.navigateTo({
+    //   url: '../usedmachinery/usedmachinery?id='+this.data.id+'&name='+this.data.name,
+    // })
+    wx.navigateBack({ delta: 2 })
   },
   onShareAppMessage: function () {
     return {

@@ -19,6 +19,8 @@ Page({
         that.setData({
           infodata: res.data.list,
           merchant_img: res.data.images,
+          id: options.ids,
+          name: options.name
           //foactid: res.data.model.factory_id
         })
       }, fail: function () {
@@ -34,9 +36,10 @@ Page({
     })   
   },
   gobackdate: function () {
-    wx.navigateTo({
-      url: '../usedmachinery/usedmachinery',
-    })
+    // wx.navigateTo({
+    //   url: '../usedmachinery/usedmachinery?id=' + this.data.id + '&name=' + this.data.name,
+    // })
+    wx.navigateBack({ delta: 2 })
   },
   onShareAppMessage: function () {
     return {
