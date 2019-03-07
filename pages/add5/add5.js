@@ -8,6 +8,7 @@ Page({
     jxdj: '',
     sybw: '',
     bz: '',
+    false:false
   },
   remove: function (e) {
     var index = e.currentTarget.dataset.index;

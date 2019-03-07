@@ -101,7 +101,7 @@
       <text class="title">机械单价/元</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" data-id="4" />
+      <input bindinput="name" data-id="4" type='digit'/>
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">

@@ -26,7 +26,7 @@
       <text class="title">备注</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <textarea class="textarea-v" auto-height="true"  bindinput="name" data-id="4" maxlength="1000" cursor-spacing="100"></textarea>
+      <textarea class="textarea-v" auto-height="true" show-confirm-bar="{{false}}"  bindinput="name" data-id="4" maxlength="1000" cursor-spacing="100"></textarea>
     </view>
   </view>
   <view class="flex  flex-centerss input-box bottom">

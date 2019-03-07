@@ -1,4 +1,4 @@
-var app = getApp();
+ var app = getApp();
 var tcity = require("../../utils/citys.js");
 Page({
   data: {
