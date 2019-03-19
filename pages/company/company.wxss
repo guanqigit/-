@@ -1,0 +1,11 @@
+.container, page {
+  position: relative;
+  background-color: #fff;
+  font-family: "微软雅黑";
+}
+.list{
+  padding: 20rpx 30rpx;
+  font-size: 28rpx;
+  color: #222;
+  border-bottom: 1px solid #f5f5f5;
+}

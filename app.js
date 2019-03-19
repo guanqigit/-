@@ -15,6 +15,7 @@ App({
     entid: '',
     mername: '',
     storeid: '',
+    company:' ',
     // 设置全局门店地址信息
     storedata: [],
     apiUrl: {

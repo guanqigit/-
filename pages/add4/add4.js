@@ -14,7 +14,7 @@ Page({
     post10: '',
     pics: [],//
     isload: false,
-    index:0,
+    index: 0,
   },
   //项目名称
   name: function (e) {
@@ -163,12 +163,12 @@ Page({
     var number = that.data.post3;
     var carnumber = that.data.post4;
     var supplier = that.data.post5;
-    var unit = that.data.array[that.data.index];
+    var unit = app.globalData.company;
     var arrival_count = that.data.post6;
-    var arrival_unitPrice=that.data.post7;
+    var arrival_unitPrice = that.data.post7;
     var arrival_Signer = that.data.post8;
     var arrival_part = that.data.post9;
-    var arrival_remarks=that.data.post10;
+    var arrival_remarks = that.data.post10;
     var images = that.data.pics
     if (arrival_name == '') {
       wx.showToast({
@@ -177,7 +177,7 @@ Page({
         mask: true
       })
       return;
-    } 
+    }
     if (arrival_count == '') {
       wx.showToast({
         title: ' 请填写数量',
@@ -185,7 +185,7 @@ Page({
         mask: true
       })
       return;
-    } 
+    }
     if (arrival_unitPrice == '') {
       wx.showToast({
         title: ' 请填写单价',
@@ -238,9 +238,9 @@ Page({
       })
     }
   },
-  bindPickerChange(e) {
-    this.setData({
-      index: e.detail.value,
+  chosecompany() {
+    wx.navigateTo({
+      url: '../company/company?id='+this.data.id,
     })
   },
   onLoad: function (options) {
@@ -248,30 +248,11 @@ Page({
     that.setData({
       id: options.id
     })
-    wx.request({
-      url: app.globalData.apiUrl.GetUnit,
-      data: {},
-      method: 'POST',
-      header: { "Content-Type": "application/x-www-form-urlencoded" },
-      success: function (res) {
-        var arr=[];
-        for(var i in res.data.list){
-          arr.push(res.data.list[i].Name)
-        }
-        that.setData({
-          array:arr,
-          Unitlist: res.data.list
-        })
-      }, fail: function () {
-        wx.showToast({
-          title: '加载失败',
-          image: '../../image/chacha.png',
-          duration: 2000
-        })
-      },
-      complete: function () {
-        wx.hideToast();
-      }
+  },
+  onShow:function(){
+    console.log(app.globalData.company)
+    this.setData({
+      company: app.globalData.company
     })
   },
   onShareAppMessage: function () {

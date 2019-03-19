@@ -62,16 +62,17 @@
       <input bindinput="name" data-id="5" value='{{post5}}' />
     </view>
   </view>
-  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
+  <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;" bindtap='chosecompany'>
     <view class="flex">
       <text class="title">单位</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" style='width:100%'>
-        <view class="picker">{{array[index]}}</view>
-      </picker>
+      <view class="picker">{{company}}</view>
     </view>
-    <image src='../../image/iconright1.png' class='righticon'></image>
+    <view class='flex flex-row flex-centers'>
+      <text style='color:#999'>{{company==' '?'请选择单位':''}}</text>
+      <image src='../../image/iconright1.png' class='righticon'></image>
+    </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
     <view class="flex flex-row flex-center">
@@ -79,7 +80,7 @@
       <text class="title">数量</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" type='digit' data-id="6" value='{{post6}}'/>
+      <input bindinput="name" type='digit' data-id="6" value='{{post6}}' />
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
@@ -88,7 +89,7 @@
       <text class="title">单价/元</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" type='digit' data-id="7" value='{{post7}}'/>
+      <input bindinput="name" type='digit' data-id="7" value='{{post7}}' />
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
@@ -96,7 +97,7 @@
       <text class="title">经手人</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" data-id="8" value='{{post8}}'/>
+      <input bindinput="name" data-id="8" value='{{post8}}' />
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
@@ -104,7 +105,7 @@
       <text class="title">施工部位</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">
-      <input bindinput="name" data-id="9" value='{{post9}}'/>
+      <input bindinput="name" data-id="9" value='{{post9}}' />
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;height:auto;padding:20rpx 10rpx;">

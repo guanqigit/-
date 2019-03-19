@@ -1,0 +1,3 @@
+<view class="container flex flex-column">
+  <view class='list' wx:for="{{Unitlist}}" wx:key='' data-name="{{item.Name}}" bindtap='submit'>{{item.Name}}</view>
+</view>

@@ -99,9 +99,6 @@ Page({
   },
   nav2: function () {
     var that = this;
-    wx.navigateTo({
-      url: '../allorders1/allorders?id=' + that.data.id + '&&name=' + that.data.projuctname + '&&type=2',
-    })
   },
   nav3: function () {
     var that = this;
@@ -134,9 +131,7 @@ Page({
     })
   },
   nav8: function () {
-    wx.navigateTo({
-      url: '../allorders7/allorders',
-    })
+   
   },
   nav9: function () {
     var that = this;

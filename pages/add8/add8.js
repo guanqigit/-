@@ -173,7 +173,7 @@ Page({
           images: images,//图片
           name: name,//材料名称
           modelStr: modelStr,/// 规格型号
-          unitStr: that.data.array[that.data.index],/// 单位/(如盒/箱/其他) 
+          unitStr: app.globalData.company,/// 单位/(如盒/箱/其他) 
           count: count,///  /// 数量
           price: price,/// 单价/元
           timeStr: that.data.date,/// 进厂时限 
@@ -229,9 +229,14 @@ Page({
 
     }
   },
-  bindPickerChange(e) {
+  chosecompany() {
+    wx.navigateTo({
+      url: '../company/company?id=' + this.data.id,
+    })
+  },
+  onShow: function () {
     this.setData({
-      index: e.detail.value,
+      company: app.globalData.company
     })
   },
   bindDateChange(e) {
@@ -247,63 +252,7 @@ Page({
       id: options.id,
       date: time
     })
-    wx.request({
-      url: app.globalData.apiUrl.GetUnit,
-      data: {},
-      method: 'POST',
-      header: { "Content-Type": "application/x-www-form-urlencoded" },
-      success: function (res) {
-        var arr = [];
-        for (var i in res.data.list) {
-          arr.push(res.data.list[i].Name)
-        }
-        that.setData({
-          array: arr,
-          Unitlist: res.data.list
-        })
-      }, fail: function () {
-        wx.showToast({
-          title: '加载失败',
-          image: '../../image/chacha.png',
-          duration: 2000
-        })
-      },
-      complete: function () {
-        wx.hideToast();
-      }
-    })
-    // wx.request({
-    //   url: app.globalData.apiUrl.sgload,
-    //   data: {},
-    //   method: 'POST',
-    //   header: { "Content-Type": "application/x-www-form-urlencoded" },
-    //   success: function (res) {
-    //     for (var i = 0; i < res.data.list.length; i++) {
-    //       that.data.multiArray[0].push([res.data.list[i].part_name])
-    //       for (var s = 0; s < res.data.list[i].item.length; s++) {
-    //         that.data.objectMultiArray.push({
-    //           'id': res.data.list[i].item[s].part_id,
-    //           'part_name': res.data.list[i].item[s].part_name,
-    //           'part_id': res.data.list[i].part_id
-    //         })
-    //       }
-    //     }
-    //     for (var i = 0; i < res.data.list[0].item.length; i++) {
-    //       that.data.multiArray[1].push([res.data.list[0].item[i].part_name])
-    //     }
-    //     that.setData({
-    //       multiArray: that.data.multiArray,
-    //       objectMultiArray: that.data.objectMultiArray,
-    //       list: res.data.list,
-    //       part_id: res.data.list[0].item[0].part_id
-    //     })
-    //   }, fail: function () {
 
-    //   },
-    //   complete: function () {
-
-    //   }
-    // })
   },
   onShareAppMessage: function () {
     return {

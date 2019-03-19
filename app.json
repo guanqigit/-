@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/company/company",
     "pages/pwsd/pwsd",
     "pages/add1/add1",
     "pages/add2/add2",
@@ -26,13 +27,11 @@
     "pages/usedmachinery/usedmachinery",
     "pages/businesscooperation/businesscooperation",
     "pages/allorders/allorders",
-    "pages/allorders1/allorders",
     "pages/allorders2/allorders",
     "pages/allorders3/allorders",
     "pages/allorders4/allorders",
     "pages/allorders5/allorders",
     "pages/allorders6/allorders",
-    "pages/allorders7/allorders",
     "pages/member-message/member-message"
   ],
   "window": {

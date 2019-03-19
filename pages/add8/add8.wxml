@@ -52,10 +52,12 @@
     <view class="flex">
       <text class="title">单位/（如盒、箱或其他）</text>
     </view>
-    <view class="flex flex-space flex-box flex-centerss">
-      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" style='width:100%'>
-        <view class="picker">{{array[index]}}</view>
-      </picker>
+    <view class="flex flex-space flex-box flex-centerss" bindtap='chosecompany'>
+      <view class="picker">{{company}}</view>
+    </view>
+    <view class='flex flex-row flex-centers' bindtap='chosecompany'>
+      <text style='color:#999'>{{company==' '?'请选择单位':''}}</text>
+      <image src='../../image/iconright1.png' class='righticon'></image>
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
