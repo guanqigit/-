@@ -19,5 +19,8 @@
 </view>
 <view class='flex flex-space' style='position:fixed;bottom:0;left:0;width:100%;text-align:center;font-size:30rpx;color:#000;background:#fff;padding:30rpx 0'>
   <view class='flex flex-center flex-box' bindtap='gobackdate'>数智建造</view>
-  <view class='flex flex-center flex-box' style='border-left:1px solid #f0f0f0;border-right:1px solid #f0f0f0' bindtap='addnew'>安全文明日志</view>
+  <view class='flex flex-center flex-box' style='border-left:1px solid #f0f0f0;border-right:1px solid #f0f0f0' bindtap='addnew'>
+  <image src='../../image/add.png' class='addicon'></image>
+  <text>安全文明日志</text>
+  </view>
 </view>

@@ -3,13 +3,36 @@ page {
   min-height: 100%;
 }
 
-.icon {
+.icon1 {
   width: 50rpx;
   height: 50rpx;
   margin-bottom: 10rpx;
-  border-radius: 50%;
 }
-
+.icon2 {
+  width: 50rpx;
+  height: 50rpx;
+  margin-bottom: 10rpx;
+}
+.icon3 {
+  width: 50rpx;
+  height: 50rpx;
+  margin-bottom: 10rpx;
+}
+.icon4 {
+  width: 50rpx;
+  height: 45rpx;
+  margin-bottom: 10rpx;
+}
+.icon5 {
+  width: 50rpx;
+  height: 45rpx;
+  margin-bottom: 10rpx;
+}
+.icon6 {
+  width: 50rpx;
+  height: 50rpx;
+  margin-bottom: 10rpx;
+}
 .sharebtn {
   font-size: 28rpx;
   color: #444;
@@ -22,4 +45,9 @@ page {
 }
 .sharebtn::after{
   border: none;
+}
+.shareicon{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
 }

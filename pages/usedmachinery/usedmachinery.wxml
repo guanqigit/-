@@ -5,29 +5,29 @@
   <view class='flex flex-column' style='border-bottom:1px solid #f0f0f0;position:absolute;bottom:120rpx;left:0;width:100%;'>
     <view class='flex flex-space flex-box'>
       <view class='flex flex-column flex-center flex-box' style='padding:40rpx 0;border-top:1px solid #f0f0f0' bindtap='nav7'>
-        <image src='../../image/QQ.png' class='icon'></image>
+        <image src='../../image/icon1.png' class='icon1'></image>
         <text style='font-size:28rpx;color:#444'>人员</text>
       </view>
       <view class='flex flex-column flex-center flex-box' style='padding:40rpx 0;border-left:1px solid #f0f0f0;border-right:1px solid #f0f0f0;border-top:1px solid #f0f0f0' bindtap='nav3'>
-        <image src='../../image/QQ.png' class='icon'></image>
+        <image src='../../image/icon2.png' class='icon2'></image>
         <text style='font-size:28rpx;color:#444'>材料</text>
       </view>
       <view class='flex flex-column flex-center flex-box' style='padding:40rpx 0;border-top:1px solid #f0f0f0' bindtap='nav1'>
-        <image src='../../image/QQ.png' class='icon'></image>
+        <image src='../../image/icon3.png' class='icon3'></image>
         <text style='font-size:28rpx;color:#444'>机械</text>
       </view>
     </view>
     <view class='flex flex-space flex-box' style='border-top:1px solid #f0f0f0'>
       <view class='flex flex-column flex-center flex-box' style='padding:40rpx 0' bindtap='nav4'>
-        <image src='../../image/QQ.png' class='icon'></image>
+        <image src='../../image/icon4.png' class='icon4'></image>
         <text style='font-size:28rpx;color:#444'>照片</text>
       </view>
       <view class='flex flex-column flex-center flex-box' style='padding:40rpx 0;border-left:1px solid #f0f0f0;border-right:1px solid #f0f0f0;' bindtap='nav5'>
-        <image src='../../image/QQ.png' class='icon'></image>
+        <image src='../../image/icon5.png' class='icon5'></image>
         <text style='font-size:28rpx;color:#444'>完成工程量</text>
       </view>
       <view class='flex flex-column flex-center flex-box' style='padding:40rpx 0' bindtap='nav6'>
-        <image src='../../image/QQ.png' class='icon'></image>
+        <image src='../../image/icon6.png' class='icon6'></image>
         <text style='font-size:28rpx;color:#444'>安全文明</text>
       </view>
     </view>
@@ -37,6 +37,8 @@
   <view class='flex flex-box flex-center' style='border-right:1px solid #f5f5f5;'>
     <text style="font-size:28rpx;color:#444;height:100%;border-right:1px solid #f0f0f0" class='flex flex-box flex-center' bindtap='nav9'>工程信息</text>
     <text style="font-size:28rpx;color:#444;height:100%" class='flex flex-box flex-center' bindtap='goback' wx:if="{{!btncode}}">退出项目</text>
-    <button open-type="share" class='flex flex-box flex-center sharebtn' wx:if="{{btncode}}">邀请好友</button>
+    <button open-type="share" class='flex flex-box flex-center sharebtn' wx:if="{{btncode}}">
+    <image src='../../image/share.png' class='shareicon'></image>
+    邀请好友</button>
   </view>
 </view>
