@@ -159,7 +159,7 @@ Page({
             icon: "success"
           })
           setTimeout(function () {
-            wwx.navigateBack()
+            wx.navigateBack()
           }, 1000)
         }, fail: function () {
           wx.showToast({
