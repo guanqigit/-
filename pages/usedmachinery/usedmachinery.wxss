@@ -42,6 +42,7 @@ page {
   -ms-progress-appearance: none;
   border: none;
   outline: none;
+  height: 120rpx;
 }
 .sharebtn::after{
   border: none;

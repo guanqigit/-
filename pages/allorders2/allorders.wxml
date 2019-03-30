@@ -1,5 +1,5 @@
 <view class="container">
-   <view class="flex flex-centerss  flex-space header">
+  <view class="flex flex-centerss  flex-space header">
     <view class="flex flex-box nav {{nav==0?'nav-ac':''}} flex-center" bindtap='nav' data-id="0">材料情况</view>
     <view class="flex flex-box nav {{nav==1?'nav-ac':''}} flex-center" bindtap='nav' data-id="1">材料需求</view>
   </view>
@@ -18,9 +18,9 @@
           <text style='font-size:26rpx;color:#888'>{{item.arrival_Signer}}</text>
         </view>
       </view>
-       <view class="flex flex-space flex-end-align flex-box">
-        <text class="adress">{{item.timeStr}}</text> 
-      </view> 
+      <view class="flex flex-space flex-end-align flex-box">
+        <text class="adress">{{item.timeStr}}</text>
+      </view>
     </view>
   </view>
   <view class='flex flex-center' style="padding:20rpx 0" wx:if="{{list.length==0&&nav==0}}">暂无数据</view>
@@ -39,21 +39,21 @@
           <text style='font-size:26rpx;color:#888'>{{item.partId}}</text>
         </view>
       </view>
-       <view class="flex flex-space flex-end-align flex-box">
-        <text class="adress">{{item.timeStr}}</text> 
-      </view> 
+      <view class="flex flex-space flex-end-align flex-box">
+        <text class="adress">{{item.timeStr}}</text>
+      </view>
     </view>
   </view>
   <view class='flex flex-center' style="padding:20rpx 0" wx:if="{{list.length==0&&nav==1}}">暂无数据</view>
 </view>
-<view class='flex flex-space' style='position:fixed;bottom:0;left:0;width:100%;text-align:center;font-size:30rpx;color:#000;background:#fff;padding:30rpx 0'>
-  <view class='flex flex-center flex-box' bindtap='gobackdate'>数智建造</view>
-  <view class='flex flex-center flex-box' style='border-left:1px solid #f0f0f0;border-right:1px solid #f0f0f0' bindtap='addnew'>
-  <image src='../../image/add.png' class='addicon'></image>
-  <text>材料进场情况</text>
+<view class='flex flex-space' style='position:fixed;bottom:0;left:0;width:100%;text-align:center;font-size:30rpx;color:#000;background:#fff;'>
+  <view class='flex flex-center flex-box' bindtap='gobackdate' style='padding:40rpx 0'>数智建造</view>
+  <view class='flex flex-center flex-box' style='border-left:1px solid #f0f0f0;border-right:1px solid #f0f0f0;padding:40rpx 0' bindtap='addnew'>
+    <image src='../../image/add.png' class='addicon'></image>
+    <text>材料进场情况</text>
   </view>
-  <view class='flex flex-center flex-box' bindtap='addnew1'>
-  <image src='../../image/add.png' class='addicon'></image>
-  <text>材料需求计划</text>
+  <view class='flex flex-center flex-box' bindtap='addnew1' style='padding:40rpx 0'>
+    <image src='../../image/add.png' class='addicon'></image>
+    <text>材料需求计划</text>
   </view>
 </view>

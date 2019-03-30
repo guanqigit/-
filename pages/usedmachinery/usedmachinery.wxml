@@ -24,7 +24,7 @@
       </view>
       <view class='flex flex-column flex-center flex-box' style='padding:40rpx 0;border-left:1px solid #f0f0f0;border-right:1px solid #f0f0f0;' bindtap='nav5'>
         <image src='../../image/icon5.png' class='icon5'></image>
-        <text style='font-size:28rpx;color:#444'>完成工程量</text>
+        <text style='font-size:28rpx;color:#444'>施工日志</text>
       </view>
       <view class='flex flex-column flex-center flex-box' style='padding:40rpx 0' bindtap='nav6'>
         <image src='../../image/icon6.png' class='icon6'></image>
