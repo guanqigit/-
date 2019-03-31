@@ -49,8 +49,7 @@
     </view>
   </view>
   <view class="flex flex-row flex-centerss input-box" style="margin-top:20rpx;">
-    <view class="flex flex-row flex-center">
-      <text class="red">*</text>
+    <view class="flex">
       <text class="title">单价/元</text>
     </view>
     <view class="flex flex-space flex-box flex-centerss">

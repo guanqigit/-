@@ -123,14 +123,6 @@ Page({
         mask: true
       })
       return;
-    } 
-    else if (material_price == '') {
-      wx.showToast({
-        title: ' 请填写单价',
-        icon: 'none',
-        mask: true
-      })
-      return;
     } else {
       wx.showLoading({
         title: '正在提交',
